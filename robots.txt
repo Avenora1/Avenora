@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://avenora.com/sitemap.xml
