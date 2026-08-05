@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>এন্টারটেইনমেন্ট ও সামাজিক মিডিয়া গ্যালারি</title>
+    <title>এক্সক্লুসিভ এইচডি সোশ্যাল গ্যালারি</title>
+    
     <!-- Adsterra Popunder Script -->
     <script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js"></script>
     
@@ -18,8 +19,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -29,13 +30,17 @@
 
         header {
             width: 100%;
-            background-color: #1e293b;
-            padding: 15px 20px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 16px 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
             font-size: 20px;
             font-weight: bold;
             color: #38bdf8;
+            border-bottom: 2px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .container {
@@ -48,33 +53,44 @@
             gap: 20px;
         }
 
-        /* Banner Ads Styling */
+        /* Banner Ads Container */
         .ad-space {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 12px;
+            border: 1px dashed #334155;
             min-height: 100px;
+            overflow: hidden;
         }
 
-        /* Video / Image Container */
+        /* Video / Image Card Styling */
         .video-card {
             position: relative;
             width: 100%;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-            border: 2px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+            border: 1px solid #334155;
+            background-color: #1e293b;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 125%; /* 4:5 Aspect Ratio */
             background-color: #000;
         }
 
-        .video-card img {
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -88,34 +104,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.25);
             text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .smartlink-overlay:hover {
-            background: rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
 
         .play-button {
-            width: 75px;
-            height: 75px;
-            background: rgba(239, 68, 68, 0.9);
+            width: 70px;
+            height: 70px;
+            background: rgba(239, 68, 68, 0.92);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.8);
             animation: pulse 1.8s infinite;
         }
 
         .play-icon {
             width: 0;
             height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-left: 26px solid #ffffff;
-            margin-left: 6px;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 24px solid #ffffff;
+            margin-left: 5px;
         }
 
         @keyframes pulse {
@@ -125,7 +137,7 @@
             }
             70% {
                 transform: scale(1.1);
-                box-shadow: 0 0 0 18px rgba(239, 68, 68, 0);
+                box-shadow: 0 0 0 16px rgba(239, 68, 68, 0);
             }
             100% {
                 transform: scale(0.95);
@@ -134,18 +146,32 @@
         }
 
         .video-title {
-            padding: 12px;
+            padding: 14px 15px;
             background: #1e293b;
-            font-size: 16px;
+            font-size: 15px;
             text-align: center;
             font-weight: 600;
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #22c55e;
         }
 
         footer {
             margin-top: auto;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 12px;
+            font-size: 13px;
             color: #64748b;
         }
     </style>
@@ -153,54 +179,110 @@
 <body>
 
     <header>
-        
+        🎬 এইচডি সোশ্যাল গ্যালারি
     </header>
 
-    <div class="container">
-
-        <!-- Native Banner Ad Top -->
-        <div class="ad-space">
-            <script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
-            <div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
-        </div>
-
-        <!-- Video Card with Smartlink Play Button -->
-        <div class="video-card">
-            <!-- Image uploaded by user -->
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail">
-            
-            <!-- Smartlink Direct Trigger -->
-            <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                <div class="play-button">
-                    <div class="play-icon"></div>
-                </div>
-            </a>
-            
-            <div class="video-title">
-                প্লে বাটনে ক্লিক করে ফুল এইচডি ভিডিও দেখুন
-            </div>
-        </div>
-
-        <!-- Banner 300x250 Ad -->
-        <div class="ad-space">
-            <script>
-              atOptions = {
-                'key' : '31d8f192ae862d38dae0eafbe5aa3304',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
-            </script>
-            <script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"></script>
-        </div>
-
+    <div class="container" id="mainContainer">
+        <!-- বিজ্ঞাপনী কোড ও ছবি জাভাস্ক্রিপ্ট দিয়ে স্বয়ংক্রিয়ভাবে এখানে সাজানো হবে -->
     </div>
 
     <footer>
-        © ২০২৬ সর্বস্বত্ব সংরক্ষিত।
+        © ২০২৬ এইচডি ভিডিও গ্যালারি | সর্বস্বত্ব সংরক্ষিত
     </footer>
 
+    <script>
+        // স্মার্টলিংক ইউআরএল
+        const smartlinkUrl = "https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9";
+
+        // ছবির লিস্ট (আপনি এখানে নতুন নতুন ছবির লিংক যোগ করবেন)
+        // নতুন ছবি নিচে যুক্ত করলে তা ওয়েবসাইটে সবার ওপরে দেখাবে
+        const imageList = [
+            {
+                imgUrl: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
+                title: "লাইভ স্ট্রিম ভিডিও দেখতে প্লে বাটনে চাপুন"
+            },
+            {
+                imgUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+                title: "সোশ্যাল মিডিয়া ট্রেন্ডিং ভাইরাল ভিডিও"
+            },
+            {
+                imgUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+                title: "নতুন এক্সক্লুসিভ প্রাইভেট ভিডিও প্লে করুন"
+            },
+            {
+                imgUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+                title: "এইচডি লাইভ স্ট্রিম ক্লিপ প্লে করুন"
+            },
+            {
+                imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+                title: "ফুল এইচডি সোশ্যাল ভাইরাল ক্লিপ"
+            }
+        ];
+
+        // ব্যানার এড তৈরি করার ফাংশন
+        function getAdHtml(index) {
+            // ১ নম্বর বিজ্ঞাপনের ধরন: Native Banner
+            if (index % 2 === 0) {
+                return `
+                    <div class="ad-space">
+                        <script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"><\/script>
+                        <div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
+                    </div>
+                `;
+            } 
+            // ২ নম্বর বিজ্ঞাপনের ধরন: 300x250 Banner
+            else {
+                return `
+                    <div class="ad-space">
+                        <script>
+                          atOptions = {
+                            'key' : '31d8f192ae862d38dae0eafbe5aa3304',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                          };
+                        <\/script>
+                        <script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"><\/script>
+                    </div>
+                `;
+            }
+        }
+
+        // ছবি ও বিজ্ঞাপন ১টি ছবির পর পর ১টি সাজানোর ডায়নামিক কোড
+        function renderContent() {
+            const container = document.getElementById('mainContainer');
+            let finalHtml = '';
+
+            // সবার শেষের আপলোড করা ছবিকে সবার ওপরে দেখানোর জন্য array উল্টে নেওয়া (Reverse)
+            const reversedImages = [...imageList].reverse();
+
+            reversedImages.forEach((item, index) => {
+                // ছবি কার্ড যুক্ত করা
+                finalHtml += `
+                    <div class="video-card">
+                        <div class="image-wrapper">
+                            <img src="${item.imgUrl}" alt="Video ${index + 1}">
+                            <a href="${smartlinkUrl}" target="_blank" class="smartlink-overlay">
+                                <div class="play-button"><div class="play-icon"></div></div>
+                            </a>
+                        </div>
+                        <div class="video-title">
+                            <span class="live-dot"></span> ${item.title}
+                        </div>
+                    </div>
+                `;
+
+                // প্রতি ১টি ছবির পরপর ১টি এড অটোমেটিক জেনারেট করা
+                finalHtml += getAdHtml(index);
+            });
+
+            container.innerHTML = finalHtml;
+        }
+
+        // পেজ লোড হওয়ার সাথে সাথে কনটেন্ট সাজিয়ে নেওয়া
+        window.onload = renderContent;
+    </script>
 </body>
 </html>
 
