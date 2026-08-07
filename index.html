@@ -1,300 +1,124 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vairal Video link</title>
-    
-    <!-- Adsterra Popunder Script -->
-    <script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js"></script>
-    
-    <!-- Adsterra Social Bar Script -->
-    <script src="https://servicessitclaims.com/4f/ef/ab/4fefab960441812ab661efd14ac92373.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Gallery</title>
+<meta name="description" content="High quality gallery collection">
+<meta name="robots" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d0d0d;color:#fff;font-family:Arial,sans-serif;line-height:1.4}
+.header{text-align:center;padding:15px;background:#111}
+.header h1{font-size:22px;font-weight:600}
+.container{max-width:1200px;margin:0 auto;padding:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.item{position:relative;border-radius:8px;overflow:hidden;background:#1a1a1a;aspect-ratio:16/9}
+.item img{width:100%;height:100%;object-fit:cover;display:block}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+width:70px;height:70px;background:rgba(0,0,0,0.55);border-radius:50%;
+display:flex;align-items:center;justify-content:center;cursor:pointer;
+transition:0.2s;border:3px solid rgba(255,255,255,0.85)}
+.play-btn:hover{background:rgba(255,0,0,0.75);transform:translate(-50%,-50%) scale(1.08)}
+.play-btn::after{content:"";display:block;width:0;height:0;
+border-top:14px solid transparent;border-bottom:14px solid transparent;
+border-left:24px solid #fff;margin-left:6px}
+.ad-box{margin:15px auto;text-align:center}
+.footer{text-align:center;padding:20px;font-size:13px;color:#777}
+@media(max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:8px}.play-btn{width:55px;height:55px}}
+</style>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<!-- Popunder -->
+<script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js"></script>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0f19;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            width: 100%;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            padding: 16px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-            font-size: 20px;
-            font-weight: bold;
-            color: #38bdf8;
-            border-bottom: 2px solid #334155;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 600px;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Banner Ads Container */
-        .ad-space {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 10px;
-            border-radius: 12px;
-            border: 1px dashed #334155;
-            min-height: 100px;
-            overflow: hidden;
-        }
-
-        /* Video / Image Card Styling */
-        .video-card {
-            position: relative;
-            width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
-            border: 1px solid #334155;
-            background-color: #1e293b;
-        }
-
-        .image-wrapper {
-            position: relative;
-            width: 100%;
-            padding-top: 125%; /* 4:5 Aspect Ratio */
-            background-color: #000;
-        }
-
-        .image-wrapper img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Fake Play Button Overlay */
-        .smartlink-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.25);
-            text-decoration: none;
-            z-index: 10;
-        }
-
-        .play-button {
-            width: 70px;
-            height: 70px;
-            background: rgba(239, 68, 68, 0.92);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 25px rgba(239, 68, 68, 0.8);
-            animation: pulse 1.8s infinite;
-        }
-
-        .play-icon {
-            width: 0;
-            height: 0;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            border-left: 24px solid #ffffff;
-            margin-left: 5px;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-            }
-            70% {
-                transform: scale(1.1);
-                box-shadow: 0 0 0 16px rgba(239, 68, 68, 0);
-            }
-            100% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-            }
-        }
-
-        .video-title {
-            padding: 14px 15px;
-            background: #1e293b;
-            font-size: 15px;
-            text-align: center;
-            font-weight: 600;
-            color: #f1f5f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 8px #22c55e;
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            text-align: center;
-            font-size: 13px;
-            color: #64748b;
-        }
-    </style>
+<!-- Socialbar -->
+<script src="https://servicessitclaims.com/4f/ef/ab/4fefab960441812ab661efd14ac92373.js"></script>
 </head>
 <body>
 
-    <header>
-    <a href="Https://t.me/+6SlbprzhQ6YyNmQ1" target="_blank" style="color: #38bdf8; text-decoration: none;">✈️ Join Telegram Channel</a>
-    </header>
-    
+<div class="header">
+<h1>Premium HD Collection</h1>
+</div>
 
-    <div class="container">
+<div class="container">
 
-        <!-- ছবি ১ (সবার নতুন আপলোড করা ছবি) -->
-        <div class="video-card">
-            <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Video 1">
-                <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                    <div class="play-button"><div class="play-icon"></div></div>
-                </a>
-            </div>
-            <div class="video-title">
-                <span class="live-dot"></span> লাইভ স্ট্রিম ভিডিও দেখতে প্লে বাটনে চাপুন
-            </div>
-        </div>
+<!-- Native Banner -->
+<div class="ad-box">
+<script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
+<div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
+</div>
 
-        <!-- বিজ্ঞাপন ১: নেটিভ ব্যানার -->
-        <div class="ad-space">
-            <script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
-            <div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
-        </div>
+<div class="grid">
 
-        <!-- ছবি ২ -->
-        <div class="video-card">
-            <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80" alt="Video 2">
-                <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                    <div class="play-button"><div class="play-icon"></div></div>
-                </a>
-            </div>
-            <div class="video-title">
-                <span class="live-dot"></span> সোশ্যাল মিডিয়া ট্রেন্ডিং ভাইরাল ভিডিও
-            </div>
-        </div>
+<!-- Item 1 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/64/600/340" alt="Gallery 1" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- বিজ্ঞাপন ২: ৩০০x২৫০ ব্যানার -->
-        <div class="ad-space">
-            <script>
-              atOptions = {
-                'key' : '31d8f192ae862d38dae0eafbe5aa3304',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
-            </script>
-            <script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"></script>
-        </div>
+<!-- Item 2 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/65/600/340" alt="Gallery 2" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- ছবি ৩ -->
-        <div class="video-card">
-            <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Video 3">
-                <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                    <div class="play-button"><div class="play-icon"></div></div>
-                </a>
-            </div>
-            <div class="video-title">
-                <span class="live-dot"></span> নতুন এক্সক্লুসিভ প্রাইভেট ভিডিও প্লে করুন
-            </div>
-        </div>
+<!-- Item 3 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/66/600/340" alt="Gallery 3" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- বিজ্ঞাপন ৩: নেটিভ ব্যানার -->
-        <div class="ad-space">
-            <script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
-            <div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
-        </div>
+<!-- Item 4 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/67/600/340" alt="Gallery 4" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- ছবি ৪ -->
-        <div class="video-card">
-            <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Video 4">
-                <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                    <div class="play-button"><div class="play-icon"></div></div>
-                </a>
-            </div>
-            <div class="video-title">
-                <span class="live-dot"></span> এইচডি লাইভ স্ট্রিম ক্লিপ প্লে করুন
-            </div>
-        </div>
+<!-- Item 5 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/68/600/340" alt="Gallery 5" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- বিজ্ঞাপন ৪: ৩০০x২৫০ ব্যানার -->
-        <div class="ad-space">
-            <script>
-              atOptions = {
-                'key' : '31d8f192ae862d38dae0eafbe5aa3304',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
-            </script>
-            <script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"></script>
-        </div>
+<!-- Item 6 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/69/600/340" alt="Gallery 6" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-        <!-- ছবি ৫ -->
-        <div class="video-card">
-            <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Video 5">
-                <a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" target="_blank" class="smartlink-overlay">
-                    <div class="play-button"><div class="play-icon"></div></div>
-                </a>
-            </div>
-            <div class="video-title">
-                <span class="live-dot"></span> ফুল এইচডি সোশ্যাল ভাইরাল ক্লিপ
-            </div>
-        </div>
+<!-- Item 7 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/70/600/340" alt="Gallery 7" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-    </div>
+<!-- Item 8 -->
+<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
+<img src="https://picsum.photos/id/71/600/340" alt="Gallery 8" loading="lazy">
+<div class="play-btn"></div>
+</a>
 
-    <footer>
-        © ২০২৬ এইচডি ভিডিও গ্যালারি | সর্বস্বত্ব সংরক্ষিত
-    </footer>
+</div>
+
+<!-- 300x250 Banner -->
+<div class="ad-box">
+<script>
+atOptions = {
+'key' : '31d8f192ae862d38dae0eafbe5aa3304',
+'format' : 'iframe',
+'height' : 250,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"></script>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Premium Gallery
+</div>
 
 </body>
-</html>
+    </html>
