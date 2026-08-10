@@ -1,124 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Gallery</title>
-<meta name="description" content="High quality gallery collection">
-<meta name="robots" content="index, follow">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d0d0d;color:#fff;font-family:Arial,sans-serif;line-height:1.4}
-.header{text-align:center;padding:15px;background:#111}
-.header h1{font-size:22px;font-weight:600}
-.container{max-width:1200px;margin:0 auto;padding:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.item{position:relative;border-radius:8px;overflow:hidden;background:#1a1a1a;aspect-ratio:16/9}
-.item img{width:100%;height:100%;object-fit:cover;display:block}
-.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-width:70px;height:70px;background:rgba(0,0,0,0.55);border-radius:50%;
-display:flex;align-items:center;justify-content:center;cursor:pointer;
-transition:0.2s;border:3px solid rgba(255,255,255,0.85)}
-.play-btn:hover{background:rgba(255,0,0,0.75);transform:translate(-50%,-50%) scale(1.08)}
-.play-btn::after{content:"";display:block;width:0;height:0;
-border-top:14px solid transparent;border-bottom:14px solid transparent;
-border-left:24px solid #fff;margin-left:6px}
-.ad-box{margin:15px auto;text-align:center}
-.footer{text-align:center;padding:20px;font-size:13px;color:#777}
-@media(max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:8px}.play-btn{width:55px;height:55px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend World - Exclusive Viral Collection</title>
+    
+    <!-- Open Graph Meta Tags for Facebook/Messenger Preview -->
+    <meta property="og:title" content="Exclusive Trending HD Collection" />
+    <meta property="og:description" content="Watch full HD video content and exclusive photo gallery now." />
+    <meta property="og:image" content="https://imx.to/i/6y6nd3" />
+    <meta property="og:url" content="https://trendworld.vercel.app/" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Tailwind CSS & FontAwesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ADSTERRA POPUNDER CODE -->
+    <script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js"></script>
+    
+    <!-- ADSTERRA SOCIALBAR CODE -->
+    <script src="https://servicessitclaims.com/4f/ef/ab/4fefab960441812ab661efd14ac92373.js"></script>
 
-<!-- Popunder -->
-<script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js"></script>
-
-<!-- Socialbar -->
-<script src="https://servicessitclaims.com/4f/ef/ab/4fefab960441812ab661efd14ac92373.js"></script>
+    <style>
+        .play-btn-glow {
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.9);
+            animation: pulse-ring 1.8s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8); }
+            70% { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .post-card {
+            background: #111113;
+            border: 1px solid #27272a;
+        }
+        /* Fix image clarity and prevent pixelation */
+        .full-hd-img {
+            image-rendering: -webkit-optimize-contrast;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-black text-gray-100 font-sans antialiased min-h-screen selection:bg-red-600 selection:text-white">
 
-<div class="header">
-<h1>Premium HD Collection</h1>
-</div>
+    <!-- Global Redirect Logic -->
+    <script>
+        const SMARTLINK_URL = "https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9";
+        const TELEGRAM_URL = "https://t.me/+6SlbprzhQ6YyNmQ1";
 
-<div class="container">
+        function openSmartlink() {
+            window.open(SMARTLINK_URL, '_blank');
+        }
+        function openTelegram() {
+            window.open(TELEGRAM_URL, '_blank');
+        }
+    </script>
 
-<!-- Native Banner -->
-<div class="ad-box">
-<script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
-<div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
-</div>
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 px-4 py-3 shadow-2xl">
+        <div class="max-w-md mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="bg-red-600 text-white font-black px-2 py-0.5 rounded text-xs tracking-wider uppercase">4K HD</span>
+                <h1 class="text-xl font-extrabold tracking-tight text-white">Trend<span class="text-red-500">World</span></h1>
+            </div>
+            <button onclick="openTelegram()" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:opacity-90 text-white text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md transition">
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+            </button>
+        </div>
+    </header>
 
-<div class="grid">
+    <!-- Main Content Container -->
+    <main class="max-w-md mx-auto px-2 py-4 space-y-5">
 
-<!-- Item 1 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/64/600/340" alt="Gallery 1" loading="lazy">
-<div class="play-btn"></div>
-</a>
+        <!-- Top Announcement Banner -->
+        <div onclick="openSmartlink()" class="cursor-pointer bg-gradient-to-r from-red-950/60 via-zinc-900 to-red-950/60 border border-red-500/40 rounded-2xl p-3 text-center shadow-lg">
+            <p class="text-xs font-semibold text-red-300 flex items-center justify-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                Click on any video to stream full HD online now!
+            </p>
+        </div>
 
-<!-- Item 2 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/65/600/340" alt="Gallery 2" loading="lazy">
-<div class="play-btn"></div>
-</a>
+        <!-- POST 1 (Top Featured Image) -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-yellow-400 to-red-600 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/09/6y6nd3.png" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Special HD #1</h2>
+                        <p class="text-[10px] text-gray-400">Trending • <span class="text-green-400">Verified</span></p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 5.8M Views</span>
+            </div>
 
-<!-- Item 3 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/66/600/340" alt="Gallery 3" loading="lazy">
-<div class="play-btn"></div>
-</a>
+            <!-- Image Container with Pure Play Icon -->
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/09/6y6nd3.png" alt="Featured Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
 
-<!-- Item 4 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/67/600/340" alt="Gallery 4" loading="lazy">
-<div class="play-btn"></div>
-</a>
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Click on the image above to watch full HD video stream without buffering.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5 hover:text-red-500 transition"><i class="fas fa-heart text-red-500"></i> 240K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5 hover:text-blue-400 transition"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5 hover:text-green-400 transition"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
 
-<!-- Item 5 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/68/600/340" alt="Gallery 5" loading="lazy">
-<div class="play-btn"></div>
-</a>
+        <!-- POST 2 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/09/6y6kw0.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #2</h2>
+                        <p class="text-[10px] text-gray-400">Popular • Ultra HD</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 4.2M Views</span>
+            </div>
 
-<!-- Item 6 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/69/600/340" alt="Gallery 6" loading="lazy">
-<div class="play-btn"></div>
-</a>
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/09/6y6kw0.jpg" alt="Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
 
-<!-- Item 7 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/70/600/340" alt="Gallery 7" loading="lazy">
-<div class="play-btn"></div>
-</a>
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Click above to start high-speed video playback now.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-heart text-red-500"></i> 185K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
 
-<!-- Item 8 -->
-<a href="https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9" class="item" target="_blank" rel="noopener">
-<img src="https://picsum.photos/id/71/600/340" alt="Gallery 8" loading="lazy">
-<div class="play-btn"></div>
-</a>
+        <!-- POST 3 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/08/6y5jqp.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #3</h2>
+                        <p class="text-[10px] text-gray-400">Viral • 1080p</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 3.9M Views</span>
+            </div>
 
-</div>
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/08/6y5jqp.jpg" alt="Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
 
-<!-- 300x250 Banner -->
-<div class="ad-box">
-<script>
-atOptions = {
-'key' : '31d8f192ae862d38dae0eafbe5aa3304',
-'format' : 'iframe',
-'height' : 250,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js"></script>
-</div>
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Click on the play button to watch full video clip.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-heart text-red-500"></i> 142K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
 
-</div>
+        <!-- POST 4 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-orange-500 to-red-500 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/08/6y5jqn.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #4</h2>
+                        <p class="text-[10px] text-gray-400">Top Rated • 4K HD</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 6.1M Views</span>
+            </div>
 
-<div class="footer">
-© 2026 Premium Gallery
-</div>
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/08/6y5jqn.jpg" alt="Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
 
-</body>
-    </html>
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Stream high quality video content on your mobile directly.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-heart text-red-500"></i> 310K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- POST 5 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-500 to-rose-600 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/08/6y5jqr.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #5</h2>
+                        <p class="text-[10px] text-gray-400">Exclusive • Ultra HD</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 2.7M Views</span>
+            </div>
+
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/08/6y5jqr.jpg" alt="Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Click on the play button above to start stream.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-heart text-red-500"></i> 115K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- POST 6 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/08/6y5jnn.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #6</h2>
+                        <p class="text-[10px] text-gray-400">Viral Series • Full HD</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 4.9M Views</span>
+            </div>
+
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/08/6y5jnn.jpg" alt="Content" class="full-hd-img transform group-hover:scale-105 transition duration-300">
+                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div class="w-16 h-16 bg-red-600/90 rounded-full flex items-center justify-center play-btn-glow border-2 border-white/90">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-3 space-y-2">
+                <p class="text-xs text-gray-300 font-medium">Click image to watch full HD video player.</p>
+                <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80 text-gray-400 text-xs font-medium">
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-heart text-red-500"></i> 205K</button>
+                    <button onclick="openTelegram()" class="flex items-center gap-1.5"><i class="fas fa-comments text-blue-400"></i> Comments</button>
+                    <button onclick="openSmartlink()" class="flex items-center gap-1.5"><i class="fas fa-share text-green-400"></i> Share</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- POST 7 -->
+        <article class="post-card rounded-2xl overflow-hidden shadow-2xl">
+            <div class="p-3 flex items-center justify-between border-b border-zinc-800/80">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-violet-500 to-purple-600 p-0.5">
+                        <img src="https://imx.to/u/t/2026/08/08/6y5jnq.jpg" class="w-full h-full object-cover rounded-full" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-extrabold text-gray-100">Russian Model Collection #7</h2>
+                        <p class="text-[10px] text-gray-400">Popular • 1080p</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-zinc-400"><i class="fas fa-eye text-red-500 mr-1"></i> 3.1M Views</span>
+            </div>
+
+            <div class="relative group cursor-pointer overflow-hidden bg-zinc-950 flex items-center justify-center" onclick="openSmartlink()">
+                <img src="https://imx.to/u/t/2026/08/08/6y5jnq.jpg" alt="Content" class="full-hd-img transform group-hover:
