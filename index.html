@@ -1,393 +1,2322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark h-full">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trend World - Instant HD Collection</title>
-    
-    <!-- Open Graph for Social Media Preview -->
-    <meta property="og:title" content="Exclusive Trending HD Collection" />
-    <meta property="og:description" content="Watch full HD video content online immediately." />
-    <meta property="og:image" content="https://imx.to/u/t/2026/08/09/6y6nd3.png" />
-    <meta property="og:url" content="https://trendworld.vercel.app/" />
-    <meta property="og:type" content="website" />
-
-    <!-- ADSTERRA POPUNDER (Non-blocking) -->
-    <script src="https://servicessitclaims.com/26/4c/d6/264cd6e62796c8485e1da347c725fb7d.js" async></script>
-    
-    <!-- ADSTERRA SOCIALBAR (Non-blocking) -->
-    <script src="https://servicessitclaims.com/4f/ef/ab/4fefab960441812ab661efd14ac92373.js" async></script>
-
-    <style>
-        /* Zero External Dependencies - Ultra Fast CSS */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #000; color: #fff; line-height: 1.4; padding-bottom: 20px; }
-        
-        .header { position: sticky; top: 0; z-index: 100; background-color: rgba(10, 10, 10, 0.95); border-bottom: 1px solid #222; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 18px; font-weight: 900; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 6px; }
-        .badge { background: #e50914; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; }
-        .tg-btn { background: #229ed9; color: #fff; border: none; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 5px; text-decoration: none; }
-        
-        .container { max-width: 450px; margin: 0 auto; padding: 10px; }
-        
-        .alert-box { background: linear-gradient(90deg, #111, #220000, #111); border: 1px solid #e50914; border-radius: 10px; padding: 10px; text-align: center; margin-bottom: 15px; cursor: pointer; }
-        .alert-text { font-size: 12px; color: #ff9999; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; }
-        .dot { width: 8px; height: 8px; background-color: #e50914; border-radius: 50%; display: inline-block; animation: blink 1s infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-        
-        .card { background: #111; border: 1px solid #222; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
-        .card-header { padding: 10px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f1f1f; }
-        .user-info { display: flex; align-items: center; gap: 8px; }
-        .avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1px solid #e50914; }
-        .title { font-size: 12px; font-weight: 700; color: #eee; }
-        .sub-title { font-size: 10px; color: #888; }
-        .views { font-size: 11px; color: #aaa; font-weight: 600; }
-        
-        .img-wrapper { position: relative; width: 100%; background: #050505; cursor: pointer; display: flex; justify-content: center; align-items: center; }
-        .img-wrapper img { width: 100%; height: auto; display: block; min-height: 200px; object-fit: cover; }
-        
-        .play-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.25); display: flex; justify-content: center; align-items: center; }
-        .play-btn { width: 55px; height: 55px; background: rgba(229, 9, 20, 0.9); border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid #fff; box-shadow: 0 0 15px rgba(229, 9, 20, 0.8); }
-        .play-icon { width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #fff; margin-left: 4px; }
-        
-        .card-body { padding: 10px; }
-        .caption { font-size: 11px; color: #ccc; margin-bottom: 8px; }
-        .actions { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1a1a1a; padding-top: 8px; font-size: 11px; color: #999; }
-        .act-btn { background: none; border: none; color: #aaa; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 4px; }
-        
-        .ad-box { background: #0a0a0a; border: 1px dashed #333; padding: 10px; border-radius: 10px; text-align: center; margin: 15px 0; }
-        .ad-label { font-size: 9px; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; }
-        
-        .tg-box { background: linear-gradient(135deg, #0d1b2a, #000814); border: 1px solid #1e3a8a; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px; }
-        .tg-box h3 { font-size: 13px; color: #93c5fd; margin-bottom: 5px; }
-        .tg-box p { font-size: 11px; color: #64748b; margin-bottom: 10px; }
-        .tg-full-btn { background: #2563eb; color: #fff; width: 100%; padding: 10px; border-radius: 8px; font-weight: 800; font-size: 12px; border: none; cursor: pointer; text-decoration: none; display: block; }
-    </style>
-</head>
-<body>
-
-    <!-- Fast JS Action -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CyberCity 3D - AAA Cyberpunk Action Game & Financial Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        const SMARTLINK = "https://servicessitclaims.com/kzci24tewg?key=7873b53612ead1a175615bf8694559b9";
-        const TELEGRAM = "https://t.me/+6SlbprzhQ6YyNmQ1";
-
-        function goSmart() {
-            window.open(SMARTLINK, '_blank');
-        }
-        function goTg() {
-            window.open(TELEGRAM, '_blank');
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#080810',
+                            card: '#121225',
+                            accent: '#00f0ff',
+                            pink: '#ff007f',
+                            yellow: '#ffe600',
+                            purple: '#7000ff',
+                            green: '#00ff66',
+                            red: '#ff2a2a'
+                        }
+                    },
+                    fontFamily: {
+                        cyber: ['Orbitron', 'sans-serif'],
+                        sans: ['Rajdhani', 'sans-serif']
+                    }
+                }
+            }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <!-- Header -->
-    <header class="header">
-        <a href="javascript:void(0)" onclick="goSmart()" class="logo">
-            <span class="badge">4K HD</span> Trend<span style="color:#e50914;">World</span>
-        </a>
-        <button onclick="goTg()" class="tg-btn">
-            <span>Telegram</span>
-        </button>
-    </header>
+    <style>
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        body {
+            background-color: #080810;
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-cyber {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .cyber-border {
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+        }
+        .cyber-border-pink {
+            border: 1px solid rgba(255, 0, 127, 0.4);
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+        }
+        .cyber-glow {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+        .cyber-glow-pink {
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080810;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f3a;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f0ff;
+        }
+        /* Touch HUD elements */
+        .hud-btn {
+            background: rgba(18, 18, 37, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(0, 240, 255, 0.5);
+            active: scale(0.95);
+        }
+        .hud-btn:active {
+            transform: scale(0.92);
+            background: rgba(0, 240, 255, 0.3);
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body class="h-full bg-cyber-bg text-white select-none">
 
-    <div class="container">
+    <!-- ADMOB & GAME CONFIGURATION OBJECT -->
+    <script>
+        window.CYBER_CONFIG = {
+            TEST_ADMOB_ID: "ca-app-pub-3940256099942544/5224354917",
+            LIVE_PUBLISHER_ID: "", // Replace with your live AdMob ID when deploying to production
+            GEM_CONVERSION_RATE_BDT: 5, // 1 Diamond/Gem = 5 BDT ($0.05)
+            WITHDRAWAL_RATE_USD_BDT: 100, // $1 USD = 100 BDT
+            MIN_WITHDRAWAL_BDT: 200, // Min payout 200 BDT ($2.00)
+            REFERRAL_COMMISSION_BDT: 20 // 20 BDT instant cash commission per referral
+        };
+    </script>
 
-        <!-- Instant Alert Box -->
-        <div onclick="goSmart()" class="alert-box">
-            <div class="alert-text">
-                <span class="dot"></span>
-                Click any image to watch full HD video now!
+    <!-- APP WRAPPER -->
+    <div id="app" class="min-h-screen flex flex-col relative">
+
+        <!-- HEADER / NAVBAR -->
+        <header class="bg-cyber-card/90 backdrop-blur-md border-b border-cyber-accent/30 sticky top-0 z-40 px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('dashboard')">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cyber-accent to-cyber-pink flex items-center justify-center font-cyber font-black text-xl text-black shadow-lg">
+                    C3D
+                </div>
+                <div>
+                    <h1 class="font-cyber font-extrabold text-lg leading-tight gradient-text tracking-wider">CYBERCITY 3D</h1>
+                    <p class="text-[10px] text-gray-400 font-mono tracking-widest" data-i18n="tagline">AAA MOBILE & PWA GAMING</p>
+                </div>
             </div>
-        </div>
 
-        <!-- POST 1 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/09/6y6nd3.png" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Special HD #1</div>
-                        <div class="sub-title">Trending • Verified</div>
+            <!-- Currency Stats & i18n Selector -->
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <!-- Points -->
+                <div class="flex items-center bg-black/60 border border-yellow-500/40 px-2.5 py-1 rounded-full text-xs font-mono">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-yellow-400 mr-1.5 fill-yellow-400"></i>
+                    <span id="user-points" class="font-bold text-yellow-400">0</span>
+                </div>
+                <!-- Blue Diamonds -->
+                <div class="flex items-center bg-black/60 border border-cyber-accent/40 px-2.5 py-1 rounded-full text-xs font-mono">
+                    <i data-lucide="gem" class="w-3.5 h-3.5 text-cyber-accent mr-1.5"></i>
+                    <span id="user-diamonds" class="font-bold text-cyber-accent">0</span>
+                </div>
+                <!-- Red Diamonds -->
+                <div class="flex items-center bg-black/60 border border-cyber-pink/40 px-2.5 py-1 rounded-full text-xs font-mono">
+                    <i data-lucide="gem" class="w-3.5 h-3.5 text-cyber-pink mr-1.5 fill-cyber-pink"></i>
+                    <span id="user-red-diamonds" class="font-bold text-cyber-pink">0</span>
+                </div>
+
+                <!-- Language Switcher Dropdown -->
+                <div class="relative">
+                    <select id="language-switcher" onchange="changeLanguage(this.value)" class="bg-black/80 border border-cyber-accent/50 text-cyber-accent text-xs rounded-lg px-2 py-1 font-mono focus:outline-none focus:border-cyber-pink cursor-pointer">
+                        <option value="EN">EN</option>
+                        <option value="BN">BN (বাংলা)</option>
+                        <option value="HI">HI (हिंदी)</option>
+                        <option value="UR">UR (اردو)</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <main id="main-content" class="flex-1 pb-20 p-4 max-w-5xl mx-auto w-full">
+
+            <!-- DASHBOARD VIEW -->
+            <section id="view-dashboard" class="space-y-6">
+                <!-- Hero Play Banner -->
+                <div class="relative rounded-2xl overflow-hidden cyber-border bg-gradient-to-r from-purple-900/60 via-cyber-card to-blue-900/60 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between shadow-2xl">
+                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyber-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="space-y-3 z-10 text-center md:text-left mb-6 md:mb-0">
+                        <span class="inline-block px-3 py-1 bg-cyber-accent/20 border border-cyber-accent text-cyber-accent text-xs font-mono rounded-full font-bold uppercase tracking-wider" data-i18n="hero_badge">
+                            SEASON 1: NEON REVOLUTION
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-cyber font-black text-white uppercase tracking-wide" data-i18n="hero_title">
+                            ENTER THE CYBER CITY
+                        </h2>
+                        <p class="text-gray-300 text-sm max-w-md" data-i18n="hero_desc">
+                            High-octane 3D cyberpunk street battles, drivable sports cars, AI cyborg bots, and real-time cash earnings!
+                        </p>
+                    </div>
+                    <div class="z-10 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                        <button onclick="launch3DGame()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyber-accent to-cyber-pink hover:from-cyan-400 hover:to-pink-500 text-black font-cyber font-black text-lg rounded-xl shadow-lg cyber-glow transform hover:scale-105 transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="play" class="w-6 h-6 fill-black"></i>
+                            <span data-i18n="btn_play_now">PLAY GAME (3D)</span>
+                        </button>
                     </div>
                 </div>
-                <div class="views">5.8M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/09/6y6nd3.png" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Click image to stream video without buffering.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 240K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- POST 2 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/09/6y6kw0.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #2</div>
-                        <div class="sub-title">Popular • Ultra HD</div>
+                <!-- User Profile & Financial Quick Stats Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Total Balance BDT -->
+                    <div class="bg-cyber-card border border-white/10 rounded-xl p-4 flex flex-col justify-between shadow-md">
+                        <div class="flex items-center justify-between text-gray-400 text-xs font-mono mb-2">
+                            <span data-i18n="stat_balance">TOTAL BALANCE</span>
+                            <i data-lucide="wallet" class="w-4 h-4 text-cyber-green"></i>
+                        </div>
+                        <div class="text-2xl font-cyber font-bold text-cyber-green">
+                            <span id="user-bdt-balance">0.00</span> BDT
+                        </div>
+                        <div class="text-[10px] text-gray-500 mt-1 font-mono" id="usd-equiv">
+                            ≈ $0.00 USD
+                        </div>
+                    </div>
+
+                    <!-- Selected Skin -->
+                    <div class="bg-cyber-card border border-white/10 rounded-xl p-4 flex flex-col justify-between shadow-md">
+                        <div class="flex items-center justify-between text-gray-400 text-xs font-mono mb-2">
+                            <span data-i18n="stat_hero">ACTIVE HERO</span>
+                            <i data-lucide="user-check" class="w-4 h-4 text-cyber-accent"></i>
+                        </div>
+                        <div class="text-lg font-cyber font-bold text-cyber-accent truncate" id="active-hero-name">
+                            Anime Female Heroine
+                        </div>
+                        <button onclick="switchTab('store')" class="text-xs text-cyber-pink hover:underline text-left mt-1 font-mono" data-i18n="link_change">
+                            Change Hero &rarr;
+                        </button>
+                    </div>
+
+                    <!-- Direct Deposit Button -->
+                    <div onclick="openDepositModal()" class="bg-gradient-to-br from-green-950/40 to-cyber-card border border-cyber-green/40 hover:border-cyber-green rounded-xl p-4 cursor-pointer transition-all group flex flex-col justify-between">
+                        <div class="flex items-center justify-between text-cyber-green text-xs font-mono mb-2">
+                            <span data-i18n="btn_deposit">DEPOSIT / BUY GEMS</span>
+                            <i data-lucide="plus-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <div class="text-sm text-gray-300 font-mono" data-i18n="deposit_sub">
+                            Instant bKash, Nagad, USDT
+                        </div>
+                        <div class="text-xs text-cyber-green font-bold mt-2" data-i18n="rate_info">
+                            1 Diamond = 5 BDT
+                        </div>
+                    </div>
+
+                    <!-- Direct Withdrawal Button -->
+                    <div onclick="openWithdrawModal()" class="bg-gradient-to-br from-purple-950/40 to-cyber-card border border-cyber-purple/40 hover:border-cyber-purple rounded-xl p-4 cursor-pointer transition-all group flex flex-col justify-between">
+                        <div class="flex items-center justify-between text-cyber-purple text-xs font-mono mb-2">
+                            <span data-i18n="btn_withdraw">WITHDRAW CASH</span>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <div class="text-sm text-gray-300 font-mono" data-i18n="withdraw_sub">
+                            Nagad, Rocket, USDT
+                        </div>
+                        <div class="text-xs text-cyber-purple font-bold mt-2" data-i18n="min_payout">
+                            Min Payout: 200 BDT
+                        </div>
                     </div>
                 </div>
-                <div class="views">4.2M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/09/6y6kw0.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Click play button to watch full video.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 185K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- POST 3 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jqp.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #3</div>
-                        <div class="sub-title">Viral • 1080p</div>
+                <!-- Navigation Quick Tabs Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Spin Wheels Card -->
+                    <div onclick="switchTab('spin')" class="cyber-border bg-cyber-card rounded-xl p-5 hover:bg-cyber-card/80 transition-all cursor-pointer flex items-center space-x-4">
+                        <div class="p-3 bg-yellow-500/20 text-yellow-400 rounded-lg">
+                            <i data-lucide="disc" class="w-8 h-8 animate-spin-slow"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-cyber font-bold text-white text-base" data-i18n="tab_spin">DUAL SPIN WHEELS</h3>
+                            <p class="text-xs text-gray-400" data-i18n="tab_spin_desc">Spin Point & Diamond Wheels for Rewards</p>
+                        </div>
+                    </div>
+
+                    <!-- Store Card -->
+                    <div onclick="switchTab('store')" class="cyber-border bg-cyber-card rounded-xl p-5 hover:bg-cyber-card/80 transition-all cursor-pointer flex items-center space-x-4">
+                        <div class="p-3 bg-cyber-pink/20 text-cyber-pink rounded-lg">
+                            <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-cyber font-bold text-white text-base" data-i18n="tab_store">CHARACTER STORE</h3>
+                            <p class="text-xs text-gray-400" data-i18n="tab_store_desc">Unlock Cyber Mercenary & Skins</p>
+                        </div>
+                    </div>
+
+                    <!-- Referral System Card -->
+                    <div onclick="switchTab('referral')" class="cyber-border bg-cyber-card rounded-xl p-5 hover:bg-cyber-card/80 transition-all cursor-pointer flex items-center space-x-4">
+                        <div class="p-3 bg-cyber-accent/20 text-cyber-accent rounded-lg">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-cyber font-bold text-white text-base" data-i18n="tab_referral">EARN REFERRALS</h3>
+                            <p class="text-xs text-gray-400" data-i18n="tab_referral_desc">Get 20 BDT per friend invited!</p>
+                        </div>
                     </div>
                 </div>
-                <div class="views">3.9M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jqp.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Tap above to play video clip immediately.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 142K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- POST 4 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jqn.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #4</div>
-                        <div class="sub-title">Top Rated • 4K HD</div>
+                <!-- Transaction & History Log -->
+                <div class="bg-cyber-card border border-white/10 rounded-xl p-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-cyber font-bold text-sm text-cyber-accent flex items-center space-x-2">
+                            <i data-lucide="history" class="w-4 h-4"></i>
+                            <span data-i18n="history_title">RECENT ACTIVITY & TRANSACTIONS</span>
+                        </h3>
+                    </div>
+                    <div id="history-list" class="space-y-2 text-xs font-mono max-h-48 overflow-y-auto">
+                        <!-- Populated by JS -->
                     </div>
                 </div>
-                <div class="views">6.1M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jqn.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">High quality video stream ready.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 310K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- POST 5 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jqr.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #5</div>
-                        <div class="sub-title">Exclusive • Ultra HD</div>
+            <!-- SPIN WHEELS VIEW -->
+            <section id="view-spin" class="hidden space-y-6">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-2xl font-cyber font-bold gradient-text" data-i18n="spin_header">DUAL SPIN WHEELS</h2>
+                    <button onclick="switchTab('dashboard')" class="text-xs text-gray-400 hover:text-white flex items-center gap-1 font-mono">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="btn_back">Back to Dashboard</span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Point Spin Wheel -->
+                    <div class="bg-cyber-card border border-yellow-500/30 rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
+                        <div class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-mono rounded-full font-bold uppercase" data-i18n="point_wheel_title">
+                            FREE POINT WHEEL
+                        </div>
+                        <p class="text-xs text-gray-400 font-mono" data-i18n="point_wheel_cost">Cost: 50 Score Points per Spin</p>
+
+                        <!-- Canvas Wheel -->
+                        <div class="relative w-64 h-64">
+                            <canvas id="canvas-point-wheel" width="256" height="256" class="w-full h-full rounded-full shadow-lg border-2 border-yellow-500/50"></canvas>
+                            <!-- Wheel Pointer -->
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-t-[16px] border-l-transparent border-r-transparent border-t-yellow-400 z-10"></div>
+                        </div>
+
+                        <button id="btn-spin-point" onclick="spinWheel('point')" class="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-cyber font-bold rounded-xl shadow-lg transition-all" data-i18n="btn_spin">
+                            SPIN POINT WHEEL
+                        </button>
+                    </div>
+
+                    <!-- Diamond Spin Wheel -->
+                    <div class="bg-cyber-card border border-cyber-pink/30 rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
+                        <div class="inline-block px-3 py-1 bg-cyber-pink/20 text-cyber-pink text-xs font-mono rounded-full font-bold uppercase" data-i18n="diamond_wheel_title">
+                            PREMIUM DIAMOND WHEEL
+                        </div>
+                        <p class="text-xs text-gray-400 font-mono" data-i18n="diamond_wheel_cost">Cost: 5 Blue Diamonds per Spin</p>
+
+                        <!-- Canvas Wheel -->
+                        <div class="relative w-64 h-64">
+                            <canvas id="canvas-diamond-wheel" width="256" height="256" class="w-full h-full rounded-full shadow-lg border-2 border-cyber-pink/50"></canvas>
+                            <!-- Wheel Pointer -->
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-t-[16px] border-l-transparent border-r-transparent border-t-cyber-pink z-10"></div>
+                        </div>
+
+                        <button id="btn-spin-diamond" onclick="spinWheel('diamond')" class="w-full py-3 bg-gradient-to-r from-cyber-accent to-cyber-pink text-black font-cyber font-bold rounded-xl shadow-lg transition-all" data-i18n="btn_spin">
+                            SPIN DIAMOND WHEEL
+                        </button>
                     </div>
                 </div>
-                <div class="views">2.7M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jqr.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Click on the video icon to start stream.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 115K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- POST 6 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jnn.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #6</div>
-                        <div class="sub-title">Viral Series • Full HD</div>
+            <!-- STORE VIEW -->
+            <section id="view-store" class="hidden space-y-6">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-cyber font-bold gradient-text" data-i18n="store_header">3D HERO CHARACTER STORE</h2>
+                    <button onclick="switchTab('dashboard')" class="text-xs text-gray-400 hover:text-white flex items-center gap-1 font-mono">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="btn_back">Back to Dashboard</span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Anime Female Heroine -->
+                    <div class="bg-cyber-card border border-cyber-pink/40 rounded-2xl p-6 space-y-4 relative overflow-hidden">
+                        <div class="absolute top-3 right-3 bg-cyber-pink/20 text-cyber-pink text-[10px] font-mono px-2 py-0.5 rounded-full uppercase font-bold" data-i18n="hero_unlocked">
+                            UNLOCKED (DEFAULT)
+                        </div>
+                        <div class="w-16 h-16 rounded-2xl bg-cyber-pink/10 border border-cyber-pink/50 flex items-center justify-center text-cyber-pink font-cyber font-black text-2xl">
+                            A1
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cyber font-bold text-white">ANIME FEMALE HEROINE</h3>
+                            <p class="text-xs text-cyber-pink font-mono" data-i18n="hero1_sub">Cyberpunk Skirt & Glowing Ponytail</p>
+                        </div>
+                        <p class="text-xs text-gray-300" data-i18n="hero1_desc">
+                            Slender 1.7m agile warrior with reactive laser dual pistols and high mobility combat speed.
+                        </p>
+                        <button id="btn-select-hero-1" onclick="selectHero('hero1')" class="w-full py-2.5 bg-cyber-pink/20 border border-cyber-pink text-cyber-pink font-cyber font-bold rounded-xl hover:bg-cyber-pink hover:text-black transition-all" data-i18n="btn_equip">
+                            EQUIPPED
+                        </button>
+                    </div>
+
+                    <!-- Male Cyber Mercenary -->
+                    <div class="bg-cyber-card border border-cyber-accent/40 rounded-2xl p-6 space-y-4 relative overflow-hidden">
+                        <div id="merc-status-badge" class="absolute top-3 right-3 bg-cyber-accent/20 text-cyber-accent text-[10px] font-mono px-2 py-0.5 rounded-full uppercase font-bold">
+                            20 DIAMONDS
+                        </div>
+                        <div class="w-16 h-16 rounded-2xl bg-cyber-accent/10 border border-cyber-accent/50 flex items-center justify-center text-cyber-accent font-cyber font-black text-2xl">
+                            M2
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-cyber font-bold text-white">MALE CYBER MERCENARY</h3>
+                            <p class="text-xs text-cyber-accent font-mono" data-i18n="hero2_sub">Tactical Chest Armor & Blue Neon Lines</p>
+                        </div>
+                        <p class="text-xs text-gray-300" data-i18n="hero2_desc">
+                            Broad-shouldered heavily armored assault merc with +20% HP shield defense and explosive laser impact.
+                        </p>
+                        <button id="btn-select-hero-2" onclick="buyOrEquipMercenary()" class="w-full py-2.5 bg-cyber-accent/20 border border-cyber-accent text-cyber-accent font-cyber font-bold rounded-xl hover:bg-cyber-accent hover:text-black transition-all" data-i18n="btn_unlock_merc">
+                            UNLOCK FOR 20 DIAMONDS
+                        </button>
                     </div>
                 </div>
-                <div class="views">4.9M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jnn.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Stream full video player online.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 205K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- POST 7 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jnq.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #7</div>
-                        <div class="sub-title">Popular • 1080p</div>
+            <!-- REFERRAL VIEW -->
+            <section id="view-referral" class="hidden space-y-6">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl font-cyber font-bold gradient-text" data-i18n="ref_header">REFERRAL COMMISSION PORTAL</h2>
+                    <button onclick="switchTab('dashboard')" class="text-xs text-gray-400 hover:text-white flex items-center gap-1 font-mono">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="btn_back">Back to Dashboard</span>
+                    </button>
+                </div>
+
+                <div class="bg-cyber-card border border-cyber-accent/40 rounded-2xl p-6 space-y-6">
+                    <div class="space-y-2">
+                        <h3 class="text-lg font-cyber font-bold text-white" data-i18n="ref_title">INVITE FRIENDS & EARN REAL CASH</h3>
+                        <p class="text-xs text-gray-300" data-i18n="ref_desc">
+                            Earn <strong class="text-cyber-green font-mono">20 BDT instant cash commission</strong> added directly to your BDT balance for every player who joins using your personal referral link!
+                        </p>
+                    </div>
+
+                    <!-- Unique Referral Link Box -->
+                    <div class="space-y-2">
+                        <label class="text-xs text-gray-400 font-mono" data-i18n="your_link">YOUR UNIQUE REFERRAL LINK:</label>
+                        <div class="flex items-center gap-2">
+                            <input id="ref-link-input" type="text" readonly class="flex-1 bg-black/60 border border-cyber-accent/30 rounded-xl px-4 py-3 text-xs font-mono text-cyber-accent focus:outline-none select-all" value="https://cybercity3d.app/?ref=USER1234">
+                            <button onclick="copyReferralLink()" class="px-5 py-3 bg-cyber-accent text-black font-cyber font-bold rounded-xl text-xs hover:bg-cyan-300 transition-all flex items-center gap-1">
+                                <i data-lucide="copy" class="w-4 h-4"></i> <span data-i18n="btn_copy">COPY</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                        <div class="bg-black/40 p-4 rounded-xl text-center">
+                            <div class="text-xs text-gray-400 font-mono" data-i18n="ref_total_count">TOTAL REFERRALS</div>
+                            <div class="text-2xl font-cyber font-bold text-cyber-accent" id="ref-count-val">0</div>
+                        </div>
+                        <div class="bg-black/40 p-4 rounded-xl text-center">
+                            <div class="text-xs text-gray-400 font-mono" data-i18n="ref_total_earned">EARNED COMMISSION</div>
+                            <div class="text-2xl font-cyber font-bold text-cyber-green"><span id="ref-earned-val">0.00</span> BDT</div>
+                        </div>
                     </div>
                 </div>
-                <div class="views">3.1M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jnq.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Click image to stream full video.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 160K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
-        <!-- ============================================== -->
-        <!-- ADSTERRA ADS (PLACEMENT AFTER 7TH POST) -->
-        <!-- ============================================== -->
+        <!-- FOOTER BAR -->
+        <footer class="bg-cyber-card/90 border-t border-white/10 py-3 text-center text-xs text-gray-500 font-mono">
+            <p data-i18n="footer_copy">CYBERCITY 3D &copy; 2025. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
 
-        <!-- Native Banner -->
-        <div class="ad-box">
-            <span class="ad-label">Sponsored Content</span>
-            <script async="async" data-cfasync="false" src="https://servicessitclaims.com/7780922ba6532cb1a5fa512b07ccab10/invoke.js"></script>
-            <div id="container-7780922ba6532cb1a5fa512b07ccab10"></div>
-        </div>
+    <!-- 3D GAME CANVAS OVERLAY CONTAINER (FULLSCREEN) -->
+    <div id="game-container" class="fixed inset-0 bg-black z-50 hidden">
+        <!-- Three.js Canvas appended here via JS -->
 
-        <!-- POST 8 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jnr.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #8</div>
-                        <div class="sub-title">Special • 4K</div>
+        <!-- IN-GAME HUD OVERLAY -->
+        <div id="game-hud" class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 z-10">
+            <!-- Top HUD Bar -->
+            <div class="flex items-center justify-between w-full pointer-events-auto">
+                <!-- Health Bar & Player Status -->
+                <div class="bg-black/75 backdrop-blur-md border border-cyber-accent/40 rounded-xl p-2.5 flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyber-pink/20 border border-cyber-pink flex items-center justify-center text-cyber-pink font-cyber font-bold text-xs" id="hud-hero-icon">
+                        P1
+                    </div>
+                    <div class="w-36 sm:w-48">
+                        <div class="flex justify-between text-[10px] font-mono mb-1 text-gray-300">
+                            <span id="hud-hero-label">HERO HP</span>
+                            <span id="hud-hp-val">100 / 100</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-2.5 rounded-full overflow-hidden border border-white/20">
+                            <div id="hud-hp-bar" class="bg-gradient-to-r from-cyber-pink to-cyber-accent h-full w-full transition-all duration-200"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="views">5.2M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jnr.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
+
+                <!-- Session Score & Exit Button -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-black/75 backdrop-blur-md border border-yellow-500/40 px-3 py-1.5 rounded-xl text-xs font-mono flex items-center space-x-1.5">
+                        <i data-lucide="zap" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <span class="text-gray-400">SCORE:</span>
+                        <span id="game-score" class="font-bold text-yellow-400 text-sm">0</span>
+                    </div>
+
+                    <button onclick="exit3DGame()" class="bg-red-900/80 hover:bg-red-600 border border-red-500 text-white p-2 rounded-xl backdrop-blur-md pointer-events-auto transition-all">
+                        <i data-lucide="x-circle" class="w-6 h-6"></i>
+                    </button>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="caption">Watch full HD stream on mobile.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 280K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
+
+            <!-- Vehicle Driving Indicator Badge -->
+            <div id="vehicle-hud-badge" class="hidden self-center bg-cyber-accent/20 border border-cyber-accent text-cyber-accent px-4 py-1.5 rounded-full font-cyber text-xs font-bold tracking-widest animate-pulse pointer-events-none">
+                DRIVING CYBER SPORTS CAR
             </div>
-        </div>
 
-        <!-- Banner 300x250 Ad -->
-        <div class="ad-box">
-            <span class="ad-label">Advertisement</span>
-            <script type="text/javascript">
-              atOptions = {
-                'key' : '31d8f192ae862d38dae0eafbe5aa3304',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
-            </script>
-            <script type="text/javascript" src="https://servicessitclaims.com/31d8f192ae862d38dae0eafbe5aa3304/invoke.js" async></script>
-        </div>
+            <!-- Mobile Touch HUD Controls -->
+            <div class="flex items-end justify-between w-full pointer-events-auto pb-2">
+                <!-- Left Virtual Joystick Area -->
+                <div id="joystick-zone" class="w-32 h-32 sm:w-40 sm:h-40 bg-white/5 border-2 border-cyber-accent/30 rounded-full relative touch-none flex items-center justify-center">
+                    <div id="joystick-knob" class="w-12 h-12 bg-cyber-accent/60 border border-cyan-200 rounded-full shadow-lg absolute pointer-events-none transition-transform duration-75"></div>
+                </div>
 
-        <!-- POST 9 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jnw.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #9</div>
-                        <div class="sub-title">Trending • Ultra HD</div>
+                <!-- Right Touch Action Buttons -->
+                <div class="flex flex-col gap-3 items-end">
+                    <!-- Enter / Exit Vehicle Button -->
+                    <button id="btn-hud-vehicle" onclick="toggleVehicleDrive()" class="hud-btn w-14 h-14 rounded-full flex items-center justify-center text-cyber-yellow shadow-lg">
+                        <i data-lucide="car" class="w-6 h-6"></i>
+                    </button>
+
+                    <div class="flex gap-3">
+                        <!-- Jump Button -->
+                        <button id="btn-hud-jump" onclick="triggerPlayerJump()" class="hud-btn w-14 h-14 rounded-full flex items-center justify-center text-cyber-accent shadow-lg">
+                            <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                        </button>
+                        <!-- Shoot / Attack Button -->
+                        <button id="btn-hud-shoot" onclick="triggerPlayerShoot()" class="hud-btn w-16 h-16 rounded-full bg-cyber-pink/30 border-cyber-pink flex items-center justify-center text-cyber-pink shadow-lg">
+                            <i data-lucide="crosshair" class="w-8 h-8"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="views">2.9M Views</div>
-            </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/t/2026/08/08/6y5jnw.jpg" alt="Content">
-                <div class="play-overlay">
-                    <div class="play-btn"><div class="play-icon"></div></div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="caption">Click on the play button to open video.</div>
-                <div class="actions">
-                    <button class="act-btn" onclick="goSmart()" style="color:#e50914;">❤️ 135K</button>
-                    <button class="act-btn" onclick="goTg()">💬 Comments</button>
-                    <button class="act-btn" onclick="goSmart()">↗️ Share</button>
-                </div>
             </div>
         </div>
+    </div>
 
-        <!-- POST 10 -->
-        <div class="card">
-            <div class="card-header">
-                <div class="user-info">
-                    <img src="https://imx.to/u/t/2026/08/08/6y5jnx.jpg" class="avatar" alt="User">
-                    <div>
-                        <div class="title">Russian Model Collection #10</div>
-                        <div class="sub-title">Most Viewed • Full HD</div>
+    <!-- MODALS SECTION -->
+
+    <!-- 1. AUTH MODAL (Google One-Tap / Mobile) -->
+    <div id="modal-auth" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-accent/50 rounded-2xl p-6 max-w-sm w-full space-y-5 shadow-2xl relative">
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyber-accent to-cyber-pink mx-auto flex items-center justify-center text-black font-cyber font-black text-2xl">
+                    C3D
+                </div>
+                <h3 class="text-xl font-cyber font-black gradient-text" data-i18n="auth_header">WELCOME TO CYBERCITY</h3>
+                <p class="text-xs text-gray-400" data-i18n="auth_sub">Sign in to sync your earnings, gems & hero progress</p>
+            </div>
+
+            <div class="space-y-3">
+                <!-- Google One-Tap Quick Sign In Button -->
+                <button onclick="handleAuth('google')" class="w-full py-3 bg-white hover:bg-gray-100 text-gray-900 font-bold text-xs rounded-xl flex items-center justify-center gap-3 transition-all shadow-md">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span data-i18n="btn_google">Google One-Tap Quick Login</span>
+                </button>
+
+                <div class="flex items-center gap-2 text-[10px] text-gray-500 font-mono my-2">
+                    <div class="flex-1 border-t border-white/10"></div>
+                    <span data-i18n="or_mobile">OR MOBILE PHONE</span>
+                    <div class="flex-1 border-t border-white/10"></div>
+                </div>
+
+                <!-- Mobile Auth Input -->
+                <input id="auth-phone" type="tel" placeholder="+880 1XXXXXXXXX" class="w-full bg-black/60 border border-white/20 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyber-accent">
+                <input id="auth-name" type="text" placeholder="Your Cyber Name" class="w-full bg-black/60 border border-white/20 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyber-accent">
+
+                <button onclick="handleAuth('mobile')" class="w-full py-3 bg-cyber-accent text-black font-cyber font-bold text-xs rounded-xl hover:bg-cyan-300 transition-all" data-i18n="btn_login_mobile">
+                    LOG IN / REGISTER
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. DEPOSIT MODAL -->
+    <div id="modal-deposit" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-green/50 rounded-2xl p-6 max-w-md w-full space-y-4 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeDepositModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <h3 class="text-xl font-cyber font-bold text-cyber-green flex items-center gap-2">
+                <i data-lucide="gem" class="w-5 h-5"></i>
+                <span data-i18n="dep_header">DEPOSIT & BUY DIAMONDS</span>
+            </h3>
+
+            <p class="text-xs text-gray-300 font-mono" data-i18n="dep_rate_desc">
+                Exchange Rate: 1 Gem/Diamond = 5 BDT ($0.05 USD)
+            </p>
+
+            <!-- Select Gem Package -->
+            <div class="space-y-2">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="dep_pkg">1. SELECT GEM PACKAGE:</label>
+                <div class="grid grid-cols-3 gap-2">
+                    <button onclick="selectDepositPkg(20, 100)" class="dep-pkg-btn bg-black/60 border border-cyber-green/40 p-2.5 rounded-xl text-center hover:border-cyber-green">
+                        <div class="text-sm font-bold text-cyber-green">20 Gems</div>
+                        <div class="text-[10px] text-gray-400 font-mono">100 BDT</div>
+                    </button>
+                    <button onclick="selectDepositPkg(50, 250)" class="dep-pkg-btn bg-black/60 border border-cyber-green/40 p-2.5 rounded-xl text-center hover:border-cyber-green">
+                        <div class="text-sm font-bold text-cyber-green">50 Gems</div>
+                        <div class="text-[10px] text-gray-400 font-mono">250 BDT</div>
+                    </button>
+                    <button onclick="selectDepositPkg(100, 500)" class="dep-pkg-btn bg-black/60 border border-cyber-green/40 p-2.5 rounded-xl text-center hover:border-cyber-green">
+                        <div class="text-sm font-bold text-cyber-green">100 Gems</div>
+                        <div class="text-[10px] text-gray-400 font-mono">500 BDT</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Payment Accounts Display -->
+            <div class="space-y-2 pt-2 border-t border-white/10">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="dep_send">2. SEND MONEY TO ACCOUNT:</label>
+                <div class="space-y-1.5 text-xs font-mono bg-black/50 p-3 rounded-xl border border-white/10">
+                    <div class="flex justify-between items-center">
+                        <span class="text-pink-400 font-bold">bKash Personal:</span>
+                        <span class="text-white select-all">01328-165326</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-orange-400 font-bold">Nagad / Rocket Personal:</span>
+                        <span class="text-white select-all">01623032807</span>
+                    </div>
+                    <div class="flex justify-between items-center text-[11px]">
+                        <span class="text-yellow-400 font-bold">Binance USDT (TRC20):</span>
+                        <span class="text-white select-all truncate ml-2">0x35881f75ba25c5580c863ff3ec963f38b24773d9</span>
                     </div>
                 </div>
-                <div class="views">6.8M Views</div>
             </div>
-            <div class="img-wrapper" onclick="goSmart()">
-                <img src="https://imx.to/u/
+
+            <!-- Anti-Fraud TrxID Input -->
+            <div class="space-y-2">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="dep_trx_label">3. ENTER TRANSACTION ID (TrxID):</label>
+                <input id="deposit-trxid" type="text" placeholder="e.g. BKT9823X11" class="w-full bg-black/60 border border-cyber-green/40 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyber-green">
+            </div>
+
+            <button onclick="submitDeposit()" class="w-full py-3 bg-cyber-green text-black font-cyber font-bold text-xs rounded-xl hover:bg-green-400 transition-all" data-i18n="btn_submit_dep">
+                SUBMIT DEPOSIT REQUEST
+            </button>
+        </div>
+    </div>
+
+    <!-- 3. WITHDRAWAL MODAL -->
+    <div id="modal-withdraw" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-purple/50 rounded-2xl p-6 max-w-md w-full space-y-4 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeWithdrawModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <h3 class="text-xl font-cyber font-bold text-cyber-purple flex items-center gap-2">
+                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                <span data-i18n="wth_header">WITHDRAW CASH BALANCE</span>
+            </h3>
+
+            <p class="text-xs text-gray-300 font-mono" data-i18n="wth_rate_desc">
+                Rate: $1 USD = 100 BDT (Min payout: 200 BDT / $2.00 USD)
+            </p>
+
+            <!-- Select Payment Gateway -->
+            <div class="space-y-2">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="wth_gateway">SELECT PAYMENT GATEWAY:</label>
+                <div class="grid grid-cols-2 gap-2">
+                    <!-- bKash Disabled Maintenance Tag -->
+                    <div class="bg-black/30 border border-red-500/30 p-2.5 rounded-xl opacity-60 cursor-not-allowed relative overflow-hidden">
+                        <span class="absolute top-1 right-1 bg-red-600 text-white text-[8px] font-mono px-1 rounded uppercase font-bold" data-i18n="maint_tag">MAINTENANCE</span>
+                        <div class="text-xs font-bold text-pink-400">bKash</div>
+                        <div class="text-[9px] text-gray-500" data-i18n="disabled">Disabled</div>
+                    </div>
+
+                    <button onclick="selectWithdrawGateway('nagad')" class="wth-gate-btn bg-black/60 border border-cyber-purple/40 p-2.5 rounded-xl text-left hover:border-cyber-purple">
+                        <div class="text-xs font-bold text-orange-400">Nagad</div>
+                        <div class="text-[9px] text-gray-400">Personal Account</div>
+                    </button>
+
+                    <button onclick="selectWithdrawGateway('rocket')" class="wth-gate-btn bg-black/60 border border-cyber-purple/40 p-2.5 rounded-xl text-left hover:border-cyber-purple">
+                        <div class="text-xs font-bold text-purple-400">Rocket</div>
+                        <div class="text-[9px] text-gray-400">Personal Account</div>
+                    </button>
+
+                    <button onclick="selectWithdrawGateway('usdt')" class="wth-gate-btn bg-black/60 border border-cyber-purple/40 p-2.5 rounded-xl text-left hover:border-cyber-purple">
+                        <div class="text-xs font-bold text-yellow-400">Binance USDT</div>
+                        <div class="text-[9px] text-gray-400">TRC20 Wallet</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Amount Input -->
+            <div class="space-y-2">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="wth_amount">WITHDRAWAL AMOUNT (BDT):</label>
+                <input id="withdraw-amount" type="number" min="200" placeholder="Minimum 200 BDT" class="w-full bg-black/60 border border-cyber-purple/40 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyber-purple">
+            </div>
+
+            <!-- Account Number / Wallet Input -->
+            <div class="space-y-2">
+                <label class="text-xs text-gray-400 font-mono" data-i18n="wth_account">RECEIVER ACCOUNT / WALLET ADDRESS:</label>
+                <input id="withdraw-account" type="text" placeholder="017XXXXXXXX or TRC20 address" class="w-full bg-black/60 border border-cyber-purple/40 rounded-xl px-4 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyber-purple">
+            </div>
+
+            <button onclick="submitWithdrawal()" class="w-full py-3 bg-cyber-purple text-white font-cyber font-bold text-xs rounded-xl hover:bg-purple-600 transition-all" data-i18n="btn_submit_wth">
+                CONFIRM WITHDRAWAL
+            </button>
+        </div>
+    </div>
+
+    <!-- 4. REWARDED AD VIDEO PLAYER FALLBACK MODAL -->
+    <div id="modal-admob-player" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border-2 border-cyber-accent rounded-2xl p-6 max-w-sm w-full space-y-5 text-center shadow-2xl relative">
+            <div class="flex items-center justify-between text-xs font-mono text-gray-400 border-b border-white/10 pb-3">
+                <span class="flex items-center gap-1.5 text-cyber-accent">
+                    <i data-lucide="tv" class="w-4 h-4"></i> ADMOB REWARDED VIDEO
+                </span>
+                <span id="ad-unit-tag" class="text-[10px] bg-white/10 px-2 py-0.5 rounded text-gray-300 select-all">
+                    TEST AD
+                </span>
+            </div>
+
+            <!-- Simulated High-Definition Video Canvas / Display Area -->
+            <div class="relative w-full h-48 bg-black rounded-xl border border-white/20 overflow-hidden flex flex-col items-center justify-center space-y-3">
+                <!-- Glowing Cyber Animation inside ad video -->
+                <div id="ad-video-anim" class="w-16 h-16 rounded-full border-4 border-cyber-accent border-t-transparent animate-spin"></div>
+                <div class="text-xs font-cyber font-bold text-cyber-accent animate-pulse" id="ad-status-msg">
+                    SPONSORED AD PLAYING...
+                </div>
+                <!-- Countdown Timer Display -->
+                <div class="absolute bottom-3 right-3 bg-black/80 border border-yellow-400 text-yellow-400 font-mono text-xs px-2.5 py-1 rounded-md">
+                    <span id="ad-timer">10</span>s
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden border border-white/20">
+                <div id="ad-progress-bar" class="bg-gradient-to-r from-cyber-accent to-cyber-pink h-full w-0 transition-all duration-1000 ease-linear"></div>
+            </div>
+
+            <p class="text-[11px] text-gray-400 font-mono" data-i18n="ad_unskippable">
+                Do not close or switch tab! Reward will be granted upon completion.
+            </p>
+        </div>
+    </div>
+
+    <!-- 5. 3-TIER REVIVE MODAL (CHARACTER DEATH) -->
+    <div id="modal-revive" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border-2 border-cyber-pink rounded-2xl p-6 max-w-sm w-full space-y-5 text-center shadow-2xl relative">
+            <div class="w-14 h-14 rounded-full bg-cyber-pink/20 border-2 border-cyber-pink mx-auto flex items-center justify-center text-cyber-pink">
+                <i data-lucide="skull" class="w-8 h-8"></i>
+            </div>
+
+            <div class="space-y-1">
+                <h3 class="text-2xl font-cyber font-black text-cyber-pink uppercase" data-i18n="death_header">HERO DOWN!</h3>
+                <p class="text-xs text-gray-300 font-mono" id="revive-tier-msg">1st Death: Watch Video Ad to Revive!</p>
+            </div>
+
+            <div class="space-y-3">
+                <button onclick="triggerAdRevive()" class="w-full py-3.5 bg-gradient-to-r from-cyber-accent to-cyber-pink text-black font-cyber font-black text-sm rounded-xl shadow-lg cyber-glow transform active:scale-95 transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="video" class="w-5 h-5"></i>
+                    <span data-i18n="btn_watch_revive">WATCH AD TO REVIVE (100% HP)</span>
+                </button>
+
+                <button onclick="cancelReviveExit()" class="w-full py-2.5 bg-white/5 border border-white/10 text-gray-400 hover:text-white text-xs font-mono rounded-xl">
+                    <span data-i18n="btn_give_up">Give Up & Exit</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. GAME OVER & 2X POINTS MODAL -->
+    <div id="modal-gameover" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border-2 border-yellow-500 rounded-2xl p-6 max-w-sm w-full space-y-5 text-center shadow-2xl relative">
+            <div class="w-14 h-14 rounded-full bg-yellow-500/20 border-2 border-yellow-500 mx-auto flex items-center justify-center text-yellow-400">
+                <i data-lucide="trophy" class="w-8 h-8"></i>
+            </div>
+
+            <div class="space-y-1">
+                <h3 class="text-2xl font-cyber font-black text-yellow-400 uppercase" data-i18n="gameover_header">GAME OVER</h3>
+                <p class="text-xs text-gray-400 font-mono" data-i18n="session_score_label">SESSION SCORE EARNED:</p>
+                <div class="text-3xl font-cyber font-black text-white" id="final-session-score">0</div>
+            </div>
+
+            <div class="space-y-3">
+                <!-- 2X Points Multiplier Button -->
+                <button id="btn-double-points" onclick="triggerAd2XPoints()" class="w-full py-3.5 bg-gradient-to-r from-yellow-400 to-amber-600 text-black font-cyber font-black text-xs rounded-xl shadow-lg transform active:scale-95 transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="zap" class="w-5 h-5 fill-black"></i>
+                    <span id="label-double-pts">Watch Ad to Double Your Points (Get 0 Points)</span>
+                </button>
+
+                <button onclick="finishGameOverDashboard()" class="w-full py-3 bg-cyber-accent/20 border border-cyber-accent text-cyber-accent font-cyber font-bold text-xs rounded-xl hover:bg-cyber-accent hover:text-black transition-all">
+                    <span data-i18n="btn_claim_dashboard">CLAIM & RETURN TO DASHBOARD</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE APPLICATION JAVASCRIPT -->
+    <script>
+        /* ==========================================================================
+           1. i18n MULTI-LANGUAGE TRANSLATION DICTIONARIES
+           ========================================================================== */
+        const TRANSLATIONS = {
+            EN: {
+                tagline: "AAA MOBILE & PWA GAMING",
+                hero_badge: "SEASON 1: NEON REVOLUTION",
+                hero_title: "ENTER THE CYBER CITY",
+                hero_desc: "High-octane 3D cyberpunk street battles, drivable sports cars, AI cyborg bots, and real-time cash earnings!",
+                btn_play_now: "PLAY GAME (3D)",
+                stat_balance: "TOTAL BALANCE",
+                stat_hero: "ACTIVE HERO",
+                link_change: "Change Hero →",
+                btn_deposit: "DEPOSIT / BUY GEMS",
+                deposit_sub: "Instant bKash, Nagad, USDT",
+                rate_info: "1 Diamond = 5 BDT",
+                btn_withdraw: "WITHDRAW CASH",
+                withdraw_sub: "Nagad, Rocket, USDT",
+                min_payout: "Min Payout: 200 BDT",
+                tab_spin: "DUAL SPIN WHEELS",
+                tab_spin_desc: "Spin Point & Diamond Wheels for Rewards",
+                tab_store: "CHARACTER STORE",
+                tab_store_desc: "Unlock Cyber Mercenary & Skins",
+                tab_referral: "EARN REFERRALS",
+                tab_referral_desc: "Get 20 BDT per friend invited!",
+                history_title: "RECENT ACTIVITY & TRANSACTIONS",
+                spin_header: "DUAL SPIN WHEELS",
+                btn_back: "Back to Dashboard",
+                point_wheel_title: "FREE POINT WHEEL",
+                point_wheel_cost: "Cost: 50 Score Points per Spin",
+                btn_spin: "SPIN WHEEL",
+                diamond_wheel_title: "PREMIUM DIAMOND WHEEL",
+                diamond_wheel_cost: "Cost: 5 Blue Diamonds per Spin",
+                store_header: "3D HERO CHARACTER STORE",
+                hero_unlocked: "UNLOCKED (DEFAULT)",
+                hero1_sub: "Cyberpunk Skirt & Glowing Ponytail",
+                hero1_desc: "Slender 1.7m agile warrior with reactive laser dual pistols and high mobility combat speed.",
+                btn_equip: "EQUIPPED",
+                hero2_sub: "Tactical Chest Armor & Blue Neon Lines",
+                hero2_desc: "Broad-shouldered heavily armored assault merc with +20% HP shield defense and explosive laser impact.",
+                btn_unlock_merc: "UNLOCK FOR 20 DIAMONDS",
+                ref_header: "REFERRAL COMMISSION PORTAL",
+                ref_title: "INVITE FRIENDS & EARN REAL CASH",
+                ref_desc: "Earn 20 BDT instant cash commission added directly to your BDT balance for every player who joins using your personal referral link!",
+                your_link: "YOUR UNIQUE REFERRAL LINK:",
+                btn_copy: "COPY",
+                ref_total_count: "TOTAL REFERRALS",
+                ref_total_earned: "EARNED COMMISSION",
+                footer_copy: "CYBERCITY 3D © 2025. ALL RIGHTS RESERVED.",
+                auth_header: "WELCOME TO CYBERCITY",
+                auth_sub: "Sign in to sync your earnings, gems & hero progress",
+                btn_google: "Google One-Tap Quick Login",
+                or_mobile: "OR MOBILE PHONE",
+                btn_login_mobile: "LOG IN / REGISTER",
+                dep_header: "DEPOSIT & BUY DIAMONDS",
+                dep_rate_desc: "Exchange Rate: 1 Gem/Diamond = 5 BDT ($0.05 USD)",
+                dep_pkg: "1. SELECT GEM PACKAGE:",
+                dep_send: "2. SEND MONEY TO ACCOUNT:",
+                dep_trx_label: "3. ENTER TRANSACTION ID (TrxID):",
+                btn_submit_dep: "SUBMIT DEPOSIT REQUEST",
+                wth_header: "WITHDRAW CASH BALANCE",
+                wth_rate_desc: "Rate: $1 USD = 100 BDT (Min payout: 200 BDT / $2.00 USD)",
+                wth_gateway: "SELECT PAYMENT GATEWAY:",
+                maint_tag: "MAINTENANCE",
+                disabled: "Disabled",
+                wth_amount: "WITHDRAWAL AMOUNT (BDT):",
+                wth_account: "RECEIVER ACCOUNT / WALLET ADDRESS:",
+                btn_submit_wth: "CONFIRM WITHDRAWAL",
+                ad_unskippable: "Do not close or switch tab! Reward will be granted upon completion.",
+                death_header: "HERO DOWN!",
+                btn_watch_revive: "WATCH AD TO REVIVE (100% HP)",
+                btn_give_up: "Give Up & Exit",
+                gameover_header: "GAME OVER",
+                session_score_label: "SESSION SCORE EARNED:",
+                btn_claim_dashboard: "CLAIM & RETURN TO DASHBOARD"
+            },
+            BN: {
+                tagline: "এএএ মোবাইল এবং পিসি ওয়েব গেম",
+                hero_badge: "সিজন ১: নিয়ন বিপ্লব",
+                hero_title: "সাইবার সিটিতে প্রবেশ করুন",
+                hero_desc: "থ্রিডি সাইবারপাঙ্ক অ্যাকশন যুদ্ধ, স্পোর্টস কার ড্রাইভিং, রোবট যুদ্ধ এবং সরাসরি টাকা আয়!",
+                btn_play_now: "গেম খেলুন (3D)",
+                stat_balance: "মোট ব্যালেন্স",
+                stat_hero: "বর্তমান হিরো",
+                link_change: "হিরো পরিবর্তন করুন →",
+                btn_deposit: "ডিপোজিট / জেমস কেনা",
+                deposit_sub: "বিকাশ, নগদ, রকেট, ইউএসডিটি",
+                rate_info: "১ ডায়মন্ড = ৫ টাকা",
+                btn_withdraw: "টাকা উত্তোলন",
+                withdraw_sub: "নগদ, রকেট, ইউএসডিটি",
+                min_payout: "সর্বনিম্ন উত্তোলন: ২০০ টাকা",
+                tab_spin: "স্পিন হুইল",
+                tab_spin_desc: "পয়েন্ট ও ডায়মন্ড হুইল ঘুরিয়ে জিতুন",
+                tab_store: "চরিত্রের দোকান",
+                tab_store_desc: "নতুন হিরো সাইবার মার্সেনারি আনলক করুন",
+                tab_referral: "রেফার কমিশন",
+                tab_referral_desc: "প্রতি রেফারে পান ২০ টাকা বোনাস!",
+                history_title: "সাম্প্রতিক লেনদেন ও হিস্ট্রি",
+                spin_header: "স্পিন হুইল পোর্টাল",
+                btn_back: "ড্যাশবোর্ডে ফিরুন",
+                point_wheel_title: "ফ্রি পয়েন্ট হুইল",
+                point_wheel_cost: "খরচ: ৫০ পয়েন্ট প্রতি স্পিন",
+                btn_spin: "হুইল ঘুরান",
+                diamond_wheel_title: "প্রিমিয়াম ডায়মন্ড হুইল",
+                diamond_wheel_cost: "খরচ: ৫ ব্লু ডায়মন্ড প্রতি স্পিন",
+                store_header: "৩ডি হিরো স্টোর",
+                hero_unlocked: "আনলক করা আছে",
+                hero1_sub: "সাইবারপাঙ্ক স্কার্ট ও নিয়ন পনিটেল",
+                hero1_desc: "দ্রুতগতির ১.৭ মিটার নারী সাইবার যোদ্ধা।",
+                btn_equip: "সিলেক্ট করা আছে",
+                hero2_sub: "ট্যাকটিক্যাল বডি আর্মার ও ব্লু লাইন",
+                hero2_desc: "শক্তিশালী সাইবার মার্সেনারি। অতিরিক্ত ২০% এইচপি শিল্ড।",
+                btn_unlock_merc: "২০ ডায়মন্ড দিয়ে আনলক করুন",
+                ref_header: "রেফার কমিশন ইনকাম",
+                ref_title: "বন্ধুদের ইনভাইট করে টাকা আয় করুন",
+                ref_desc: "আপনার রেফারেল লিঙ্ক দিয়ে কেউ যুক্ত হলেই পাবেন সাথে সাথে ২০ টাকা ক্যাশ কমিশন!",
+                your_link: "আপনার ইউনিক রেফারেল লিঙ্ক:",
+                btn_copy: "কপি করুন",
+                ref_total_count: "মোট রেফারেল",
+                ref_total_earned: "মোট ইনকাম",
+                footer_copy: "সাইবারসিটি ৩ডি © ২০২৫। সর্বস্বত্ব সংরক্ষিত।",
+                auth_header: "সাইবারসিটিতে স্বাগতম",
+                auth_sub: "লগইন করে আপনার ডায়মন্ড ও ব্যালেন্স সেভ রাখুন",
+                btn_google: "গুগল ওয়ান-ট্যাপ লগইন",
+                or_mobile: "অথবা মোবাইল নম্বর",
+                btn_login_mobile: "লগইন / রেজিস্টার",
+                dep_header: "ডিপোজিট ও জেমস কেনা",
+                dep_rate_desc: "রেট: ১ ডায়মন্ড/জেম = ৫ টাকা ($0.05 USD)",
+                dep_pkg: "১. প্যাকেজ সিলেক্ট করুন:",
+                dep_send: "২. টাকা পাঠানোর অ্যাকাউন্ট নম্বর:",
+                dep_trx_label: "৩. ট্রানজেকশন আইডি (TrxID) দিন:",
+                btn_submit_dep: "ডিপোজিট সাবমিট করুন",
+                wth_header: "ক্যাশ ব্যালেন্স উত্তোলন",
+                wth_rate_desc: "রেট: $১ USD = ১০০ টাকা (সর্বনিম্ন উত্তোলন: ২০০ টাকা)",
+                wth_gateway: "পেমেন্ট গেটওয়ে সিলেক্ট করুন:",
+                maint_tag: "রক্ষণাবেক্ষণ",
+                disabled: "বন্ধ আছে",
+                wth_amount: "উত্তোলনের পরিমাণ (টাকা):",
+                wth_account: "পেমেন্ট নম্বর / ওয়ালেট অ্যাড্রেস:",
+                btn_submit_wth: "উত্তোলন নিশ্চিত করুন",
+                ad_unskippable: "ভিডিও অ্যাড চলাকালীন ট্যাব বন্ধ করবেন না!",
+                death_header: "হিরো মারা গেছে!",
+                btn_watch_revive: "অ্যাড দেখে রিভাইভ নিন (১০০% এইচপি)",
+                btn_give_up: "গেম শেষ করুন",
+                gameover_header: "গেম ওভার",
+                session_score_label: "এই সেশনের স্কোর:",
+                btn_claim_dashboard: "পয়েন্ট জমা করে ড্যাশবোর্ডে যান"
+            },
+            HI: {
+                tagline: "3D साइबरपंक गेमिंग",
+                hero_badge: "सीज़न 1: नियॉन क्रांति",
+                hero_title: "साइबर सिटी में प्रवेश करें",
+                hero_desc: "3D साइबरपंक युद्ध, स्पोर्ट्स कार ड्राइविंग और वास्तविक नकद कमाई!",
+                btn_play_now: "गेम खेलें (3D)",
+                stat_balance: "कुल बैलेंस",
+                stat_hero: "सक्रिय हीरो",
+                link_change: "हीरो बदलें →",
+                btn_deposit: "डिपॉजिट / जेम्स खरीदें",
+                deposit_sub: "bKash, Nagad, USDT",
+                rate_info: "1 डायमंड = 5 BDT",
+                btn_withdraw: "नकद निकासी",
+                withdraw_sub: "Nagad, Rocket, USDT",
+                min_payout: "न्यूनतम निकासी: 200 BDT",
+                tab_spin: "स्पिन व्हील",
+                tab_spin_desc: "पॉइंट्स और डायमंड व्हील घुमाएं",
+                tab_store: "हीरो स्टोर",
+                tab_store_desc: "नया साइबर योद्धा अनलॉक करें",
+                tab_referral: "रेफरल कमाएं",
+                tab_referral_desc: "प्रति मित्र 20 BDT पाएं!",
+                history_title: "हाल की गतिविधि",
+                spin_header: "स्पिन व्हील",
+                btn_back: "डैशबोर्ड पर वापस जाएं",
+                point_wheel_title: "फ्री पॉइंट व्हील",
+                point_wheel_cost: "लागत: 50 पॉइंट्स",
+                btn_spin: "व्हील घुमाएं",
+                diamond_wheel_title: "प्रीमियम डायमंड व्हील",
+                diamond_wheel_cost: "लागत: 5 ब्लू डायमंड्स",
+                store_header: "3D कैरेक्टर स्टोर",
+                hero_unlocked: "अनलाक्ड",
+                hero1_sub: "साइबरपंक स्कर्ट और नियॉन हेयर",
+                hero1_desc: "तेज तर्रार महिला साइबर योद्धा।",
+                btn_equip: "चयनित",
+                hero2_sub: "टैक्टिकल आर्मर और ब्लू नियॉन",
+                hero2_desc: "शक्तिशाली साइबर योद्धा।",
+                btn_unlock_merc: "20 डायमंड्स में अनलॉक करें",
+                ref_header: "रेफरल पोर्टल",
+                ref_title: "मित्रों को आमंत्रित करें और कमाएं",
+                ref_desc: "हर नए रेफरल पर तुरंत 20 BDT का कमीशन पाएं!",
+                your_link: "आपका रेफरल लिंक:",
+                btn_copy: "कॉपी करें",
+                ref_total_count: "कुल रेफरल",
+                ref_total_earned: "कुल कमाई",
+                footer_copy: "साइबरसिटी 3D © 2025. सर्वाधिकार सुरक्षित।",
+                auth_header: "साइबरसिटी में आपका स्वागत है",
+                auth_sub: "लॉगिन करें और अपनी प्रगति सहेजें",
+                btn_google: "गूगल वन-टैप लॉगिन",
+                or_mobile: "या मोबाइल नंबर",
+                btn_login_mobile: "लॉगिन / रजिस्टर",
+                dep_header: "डिपॉजिट और जेम्स",
+                dep_rate_desc: "दर: 1 डायमंड = 5 BDT",
+                dep_pkg: "1. पैकेज चुनें:",
+                dep_send: "2. इस खाते में पैसे भेजें:",
+                dep_trx_label: "3. ट्रांजेक्शन आईडी (TrxID) दर्ज करें:",
+                btn_submit_dep: "सबमिट करें",
+                wth_header: "नकद निकासी",
+                wth_rate_desc: "न्यूनतम निकासी: 200 BDT",
+                wth_gateway: "पेमेंट गेटवे चुनें:",
+                maint_tag: "रखरखाव",
+                disabled: "अक्षम",
+                wth_amount: "निकासी राशि (BDT):",
+                wth_account: "खाता नंबर / वॉलेट पता:",
+                btn_submit_wth: "पुष्टि करें",
+                ad_unskippable: "वीडियो पूरा देखें!",
+                death_header: "हीरो डाउन!",
+                btn_watch_revive: "विज्ञापन देखें और जीवित हों",
+                btn_give_up: "बाहर निकलें",
+                gameover_header: "गेम ओवर",
+                session_score_label: "प्राप्त अंक:",
+                btn_claim_dashboard: "डैशबोर्ड पर लौटें"
+            },
+            UR: {
+                tagline: "3D سائیبر پنک گیمنگ",
+                hero_badge: "سیزن 1: نیین انقلاب",
+                hero_title: "سائیبر سٹی میں داخل ہوں",
+                hero_desc: "3D ایکشن جنگیں، اسپورٹس کاریں اور واقعی نقد رقم کمائیں!",
+                btn_play_now: "گیم کھیلیں (3D)",
+                stat_balance: "کل بیلنس",
+                stat_hero: "موجودہ ہیرو",
+                link_change: "ہیرو تبدیل کریں ←",
+                btn_deposit: "ڈیپازٹ / جیمز خریدیں",
+                deposit_sub: "bKash, Nagad, USDT",
+                rate_info: "1 ڈائمنڈ = 5 BDT",
+                btn_withdraw: "رقم نکلوا لیں",
+                withdraw_sub: "Nagad, Rocket, USDT",
+                min_payout: "کم از کم رقم: 200 BDT",
+                tab_spin: "اسپن وہیل",
+                tab_spin_desc: "پوائنٹس اور ڈائمنڈ وہیل گھمائیں",
+                tab_store: "ہیرو اسٹور",
+                tab_store_desc: "نیا سائیبر جنگجو انلاک کریں",
+                tab_referral: "ریفرل کمیشن",
+                tab_referral_desc: "ہر دوست کی دعوت پر 20 BDT حاصل کریں!",
+                history_title: "حالیہ سرگرمی",
+                spin_header: "اسپن وہیل پورٹل",
+                btn_back: "ڈیش بورڈ پر واپس جائیں",
+                point_wheel_title: "مفت پوائنٹ وہیل",
+                point_wheel_cost: "لاگت: 50 پوائنٹس",
+                btn_spin: "وہیل گھمائیں",
+                diamond_wheel_title: "پریمیم ڈائمنڈ وہیل",
+                diamond_wheel_cost: "لاگت: 5 نیلے ڈائمنڈز",
+                store_header: "3D ہیرو اسٹور",
+                hero_unlocked: "انلاک شدہ",
+                hero1_sub: "سائیبر پنک سکرٹ اور نیین بال",
+                hero1_desc: "تیز رفتار خاتون سائیبر جنگجو۔",
+                btn_equip: "منتخب شدہ",
+                hero2_sub: "ٹیکٹیکل باڈی آرمر",
+                hero2_desc: "طاقتور سائیبر جنگجو۔",
+                btn_unlock_merc: "20 ڈائمنڈز میں انلاک کریں",
+                ref_header: "ریفرل پورٹل",
+                ref_title: "دوستوں کو مدعو کریں اور کمائیں",
+                ref_desc: "ہر نئے ریفرل پر 20 BDT کا فوری کمیشن حاصل کریں!",
+                your_link: "آپ کا ریفرل لنک:",
+                btn_copy: "کاپی کریں",
+                ref_total_count: "کل ریفرلز",
+                ref_total_earned: "کل آمدنی",
+                footer_copy: "سائیبرسٹی 3D © 2025۔ جملہ حقوق محفوظ ہیں۔",
+                auth_header: "سائیبرسٹی میں خوش آمدید",
+                auth_sub: "لاگ ان کریں اور اپنی پیشرفت محفوظ رکھیں",
+                btn_google: "گوگل ون ٹیپ لاگ ان",
+                or_mobile: "یا موبائل نمبر",
+                btn_login_mobile: "لاگ ان / رجسٹر",
+                dep_header: "ڈیپازٹ اور جیمز",
+                dep_rate_desc: "شرح: 1 ڈائمنڈ = 5 BDT",
+                dep_pkg: "1۔ پیکیج منتخب کریں:",
+                dep_send: "2۔ اس اکاؤنٹ میں رقم بھیجیں:",
+                dep_trx_label: "3۔ ٹرانزیکشن آئی ڈی درج کریں:",
+                btn_submit_dep: "سبمٹ کریں",
+                wth_header: "رقم نکلوانا",
+                wth_rate_desc: "کم از کم رقم: 200 BDT",
+                wth_gateway: "پیمنٹ گیٹ وے منتخب کریں:",
+                maint_tag: "دیکھ بھال",
+                disabled: "معطل",
+                wth_amount: "رقم (BDT):",
+                wth_account: "اکاؤنٹ نمبر / والٹ ایڈریس:",
+                btn_submit_wth: "تصدیق کریں",
+                ad_unskippable: "ویڈیو پوری دیکھیں!",
+                death_header: "ہیرو ڈاؤن!",
+                btn_watch_revive: "اشتہار دیکھیں اور لائیو ہوں",
+                btn_give_up: "باہر نکلیں",
+                gameover_header: "گیم اوور",
+                session_score_label: "حاصل کردہ پوائنٹس:",
+                btn_claim_dashboard: "ڈیش بورڈ پر واپس جائیں"
+            }
+        };
+
+        let currentLang = "EN";
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const dict = TRANSLATIONS[lang] || TRANSLATIONS.EN;
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (dict[key]) {
+                    el.innerText = dict[key];
+                }
+            });
+            document.getElementById("language-switcher").value = lang;
+        }
+
+        /* ==========================================================================
+           2. DATA PERSISTENCE (LOCAL STORAGE STATE MANAGEMENT)
+           ========================================================================== */
+        const DEFAULT_STATE = {
+            user: {
+                id: "USER_" + Math.floor(100000 + Math.random() * 900000),
+                name: "Cyber Mercenary",
+                phone: "",
+                authType: "guest"
+            },
+            balanceBDT: 0.00,
+            points: 150,
+            diamonds: 10,
+            redDiamonds: 2,
+            inventory: {
+                hero1: true,
+                hero2: false
+            },
+            activeHero: "hero1",
+            referrals: {
+                count: 0,
+                earnedBDT: 0.00,
+                code: "REF" + Math.floor(1000 + Math.random() * 9000)
+            },
+            history: [
+                { id: 1, type: "BONUS", desc: "Welcome Bonus Credited", amount: "+150 Points", time: "Just now" }
+            ]
+        };
+
+        let state = JSON.parse(localStorage.getItem("CYBERCITY_3D_STATE")) || DEFAULT_STATE;
+
+        function saveState() {
+            localStorage.setItem("CYBERCITY_3D_STATE", JSON.stringify(state));
+            updateUI();
+        }
+
+        function updateUI() {
+            // Stats Header
+            document.getElementById("user-points").innerText = state.points;
+            document.getElementById("user-diamonds").innerText = state.diamonds;
+            document.getElementById("user-red-diamonds").innerText = state.redDiamonds;
+            document.getElementById("user-bdt-balance").innerText = state.balanceBDT.toFixed(2);
+
+            const usdEquiv = (state.balanceBDT / window.CYBER_CONFIG.WITHDRAWAL_RATE_USD_BDT).toFixed(2);
+            document.getElementById("usd-equiv").innerText = `≈ $${usdEquiv} USD`;
+
+            // Active Hero name
+            const activeHeroName = state.activeHero === "hero1" ? "Anime Female Heroine" : "Male Cyber Mercenary";
+            document.getElementById("active-hero-name").innerText = activeHeroName;
+
+            // Store merc button state
+            const mercBtn = document.getElementById("btn-select-hero-2");
+            const mercBadge = document.getElementById("merc-status-badge");
+            if (state.inventory.hero2) {
+                mercBadge.innerText = "UNLOCKED";
+                mercBadge.className = "absolute top-3 right-3 bg-cyber-accent/20 text-cyber-accent text-[10px] font-mono px-2 py-0.5 rounded-full uppercase font-bold";
+                if (state.activeHero === "hero2") {
+                    mercBtn.innerText = "EQUIPPED";
+                    mercBtn.className = "w-full py-2.5 bg-cyber-accent border border-cyber-accent text-black font-cyber font-bold rounded-xl";
+                } else {
+                    mercBtn.innerText = "EQUIP HERO";
+                    mercBtn.className = "w-full py-2.5 bg-cyber-accent/20 border border-cyber-accent text-cyber-accent font-cyber font-bold rounded-xl hover:bg-cyber-accent hover:text-black transition-all";
+                }
+            }
+
+            const hero1Btn = document.getElementById("btn-select-hero-1");
+            if (state.activeHero === "hero1") {
+                hero1Btn.innerText = "EQUIPPED";
+                hero1Btn.className = "w-full py-2.5 bg-cyber-pink border border-cyber-pink text-black font-cyber font-bold rounded-xl";
+            } else {
+                hero1Btn.innerText = "EQUIP HERO";
+                hero1Btn.className = "w-full py-2.5 bg-cyber-pink/20 border border-cyber-pink text-cyber-pink font-cyber font-bold rounded-xl hover:bg-cyber-pink hover:text-black transition-all";
+            }
+
+            // Referrals
+            document.getElementById("ref-count-val").innerText = state.referrals.count;
+            document.getElementById("ref-earned-val").innerText = state.referrals.earnedBDT.toFixed(2);
+            document.getElementById("ref-link-input").value = `https://cybercity3d.app/?ref=${state.referrals.code}`;
+
+            // History Log Render
+            const histList = document.getElementById("history-list");
+            histList.innerHTML = "";
+            state.history.slice().reverse().forEach(item => {
+                const row = document.createElement("div");
+                row.className = "flex items-center justify-between p-2 rounded bg-black/40 border border-white/5";
+                row.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${item.type === 'DEPOSIT' ? 'bg-green-500/20 text-green-400' : item.type === 'WITHDRAW' ? 'bg-purple-500/20 text-purple-400' : 'bg-cyber-accent/20 text-cyber-accent'}">${item.type}</span>
+                        <span class="text-gray-300 truncate max-w-[180px]">${item.desc}</span>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-white">${item.amount}</div>
+                        <div class="text-[9px] text-gray-500">${item.time}</div>
+                    </div>
+                `;
+                histList.appendChild(row);
+            });
+        }
+
+        function addHistoryItem(type, desc, amount) {
+            state.history.push({
+                id: Date.now(),
+                type,
+                desc,
+                amount,
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            });
+            if (state.history.length > 25) state.history.shift();
+            saveState();
+        }
+
+        /* ==========================================================================
+           3. UI NAVIGATION & MODALS
+           ========================================================================== */
+        function switchTab(tabId) {
+            ['dashboard', 'spin', 'store', 'referral'].forEach(t => {
+                const el = document.getElementById(`view-${t}`);
+                if (el) el.classList.add('hidden');
+            });
+            const target = document.getElementById(`view-${tabId}`);
+            if (target) target.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Auth
+        function handleAuth(type) {
+            if (type === 'google') {
+                state.user.name = "Cyber Fighter (Google)";
+                state.user.authType = "google";
+            } else {
+                const phone = document.getElementById("auth-phone").value.trim();
+                const name = document.getElementById("auth-name").value.trim();
+                if (!phone) {
+                    alert("Please enter a valid mobile number!");
+                    return;
+                }
+                state.user.name = name || "Mercenary " + phone.slice(-4);
+                state.user.phone = phone;
+                state.user.authType = "mobile";
+            }
+            document.getElementById("modal-auth").classList.add("hidden");
+            saveState();
+            addHistoryItem("AUTH", "Logged in as " + state.user.name, "Active");
+        }
+
+        // Financial Gateways (Deposit & Withdraw)
+        let selectedDepPkg = { gems: 20, bdt: 100 };
+        function openDepositModal() {
+            document.getElementById("modal-deposit").classList.remove("hidden");
+        }
+        function closeDepositModal() {
+            document.getElementById("modal-deposit").classList.add("hidden");
+        }
+        function selectDepositPkg(gems, bdt) {
+            selectedDepPkg = { gems, bdt };
+            alert(`Selected Package: ${gems} Gems for ${bdt} BDT`);
+        }
+        function submitDeposit() {
+            const trx = document.getElementById("deposit-trxid").value.trim();
+            if (!trx || trx.length < 6) {
+                alert("Anti-Fraud Security Alert: Please enter a valid Transaction ID (TrxID) minimum 6 characters.");
+                return;
+            }
+            // Add Gems & Record
+            state.diamonds += selectedDepPkg.gems;
+            addHistoryItem("DEPOSIT", `Deposit ${selectedDepPkg.bdt} BDT (TrxID: ${trx})`, `+${selectedDepPkg.gems} Gems`);
+            closeDepositModal();
+            document.getElementById("deposit-trxid").value = "";
+            alert(`Deposit Request Verified! Credited ${selectedDepPkg.gems} Blue Diamonds.`);
+        }
+
+        let selectedWithdrawGate = "nagad";
+        function openWithdrawModal() {
+            document.getElementById("modal-withdraw").classList.remove("hidden");
+        }
+        function closeWithdrawModal() {
+            document.getElementById("modal-withdraw").classList.add("hidden");
+        }
+        function selectWithdrawGateway(gate) {
+            selectedWithdrawGate = gate;
+            alert(`Gateway selected: ${gate.toUpperCase()}`);
+        }
+        function submitWithdrawal() {
+            const amount = parseFloat(document.getElementById("withdraw-amount").value);
+            const account = document.getElementById("withdraw-account").value.trim();
+
+            if (isNaN(amount) || amount < window.CYBER_CONFIG.MIN_WITHDRAWAL_BDT) {
+                alert(`Minimum withdrawal amount is ${window.CYBER_CONFIG.MIN_WITHDRAWAL_BDT} BDT!`);
+                return;
+            }
+            if (amount > state.balanceBDT) {
+                alert("Insufficient BDT balance!");
+                return;
+            }
+            if (!account || account.length < 8) {
+                alert("Please enter a valid receiver account or USDT wallet address!");
+                return;
+            }
+
+            state.balanceBDT -= amount;
+            addHistoryItem("WITHDRAW", `Payout to ${selectedWithdrawGate.toUpperCase()} (${account})`, `-${amount.toFixed(2)} BDT`);
+            closeWithdrawModal();
+            document.getElementById("withdraw-amount").value = "";
+            document.getElementById("withdraw-account").value = "";
+            alert(`Withdrawal request for ${amount} BDT submitted successfully! Processing time: 5-15 mins.`);
+        }
+
+        // Store Logic
+        function selectHero(heroKey) {
+            if (heroKey === 'hero1') {
+                state.activeHero = 'hero1';
+                saveState();
+            }
+        }
+        function buyOrEquipMercenary() {
+            if (state.inventory.hero2) {
+                state.activeHero = 'hero2';
+                saveState();
+            } else {
+                if (state.diamonds >= 20) {
+                    state.diamonds -= 20;
+                    state.inventory.hero2 = true;
+                    state.activeHero = 'hero2';
+                    addHistoryItem("STORE", "Unlocked Male Cyber Mercenary", "20 Gems");
+                    saveState();
+                    alert("Congratulations! Male Cyber Mercenary unlocked and equipped.");
+                } else {
+                    alert("Not enough Blue Diamonds! You need 20 Diamonds.");
+                    openDepositModal();
+                }
+            }
+        }
+
+        // Referral Copy
+        function copyReferralLink() {
+            const linkInput = document.getElementById("ref-link-input");
+            linkInput.select();
+            navigator.clipboard.writeText(linkInput.value);
+            alert("Referral link copied to clipboard!");
+            // Simulate instant referral bonus for test demo
+            state.referrals.count += 1;
+            state.referrals.earnedBDT += window.CYBER_CONFIG.REFERRAL_COMMISSION_BDT;
+            state.balanceBDT += window.CYBER_CONFIG.REFERRAL_COMMISSION_BDT;
+            addHistoryItem("REFERRAL", "New User Referral Bonus", `+${window.CYBER_CONFIG.REFERRAL_COMMISSION_BDT} BDT`);
+            saveState();
+        }
+
+        /* ==========================================================================
+           4. DUAL SPIN WHEELS (CANVAS ANIMATED ENGINE)
+           ========================================================================== */
+        const pointItems = ["10 Pts", "20 Pts", "50 Pts", "5 BDT", "10 BDT", "100 Pts"];
+        const diamondItems = ["1 Gem", "2 Gems", "Red Gem", "20 BDT", "50 BDT", "5 Gems"];
+
+        function drawWheel(canvasId, items, colors) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+            const numSegments = items.length;
+            const anglePerSeg = (2 * Math.PI) / numSegments;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const cx = canvas.width / 2;
+            const cy = canvas.height / 2;
+            const radius = cx - 10;
+
+            for (let i = 0; i < numSegments; i++) {
+                const angle = i * anglePerSeg;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy);
+                ctx.arc(cx, cy, radius, angle, angle + anglePerSeg);
+                ctx.closePath();
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.fill();
+                ctx.strokeStyle = "#080810";
+                ctx.lineWidth = 3;
+                ctx.stroke();
+
+                // Text
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(angle + anglePerSeg / 2);
+                ctx.textAlign = "right";
+                ctx.fillStyle = "#ffffff";
+                ctx.font = "bold 12px Orbitron";
+                ctx.fillText(items[i], radius - 15, 4);
+                ctx.restore();
+            }
+        }
+
+        function initSpinWheels() {
+            drawWheel("canvas-point-wheel", pointItems, ["#121225", "#1f1f3a", "#2a2a50", "#121225", "#1f1f3a", "#2a2a50"]);
+            drawWheel("canvas-diamond-wheel", diamondItems, ["#3b0764", "#581c87", "#7e22ce", "#3b0764", "#581c87", "#7e22ce"]);
+        }
+
+        let isSpinning = false;
+        function spinWheel(type) {
+            if (isSpinning) return;
+
+            if (type === 'point') {
+                if (state.points < 50) {
+                    alert("Requires 50 Score Points to spin!");
+                    return;
+                }
+                state.points -= 50;
+            } else {
+                if (state.diamonds < 5) {
+                    alert("Requires 5 Blue Diamonds to spin!");
+                    return;
+                }
+                state.diamonds -= 5;
+            }
+            saveState();
+
+            isSpinning = true;
+            playAudioSound('spin');
+            const canvas = document.getElementById(type === 'point' ? 'canvas-point-wheel' : 'canvas-diamond-wheel');
+            let rotation = 0;
+            const totalRotation = 1440 + Math.floor(Math.random() * 360);
+            const startTime = performance.now();
+            const duration = 3000;
+
+            function animateSpin(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentAngle = easeOut * totalRotation;
+
+                canvas.style.transform = `rotate(${currentAngle}deg)`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateSpin);
+                } else {
+                    isSpinning = false;
+                    canvas.style.transform = `rotate(${totalRotation % 360}deg)`;
+
+                    // Reward calculation
+                    if (type === 'point') {
+                        state.points += 100;
+                        state.balanceBDT += 5;
+                        addHistoryItem("SPIN", "Free Point Wheel Reward", "+100 Pts & +5 BDT");
+                        alert("Spin Complete! Won +100 Score Points & 5 BDT Cash!");
+                    } else {
+                        state.redDiamonds += 1;
+                        state.balanceBDT += 20;
+                        addHistoryItem("SPIN", "Diamond Wheel Premium Reward", "+1 Red Diamond & +20 BDT");
+                        alert("Spin Complete! Won +1 Red Diamond & 20 BDT Cash!");
+                    }
+                    saveState();
+                }
+            }
+            requestAnimationFrame(animateSpin);
+        }
+
+        /* ==========================================================================
+           5. ADMOB REWARDED AD CONTROLLER, 3-TIER REVIVE & 2X POINTS MECHANICS
+           ========================================================================== */
+        let adCallbackOnSuccess = null;
+        let adTimerInterval = null;
+
+        // Session Game State
+        let sessionScore = 0;
+        let sessionDeathCount = 0;
+        let doublePointsClaimed = false;
+
+        function showRewardedAd(onSuccess) {
+            adCallbackOnSuccess = onSuccess;
+            const modal = document.getElementById("modal-admob-player");
+            modal.classList.remove("hidden");
+
+            const timerEl = document.getElementById("ad-timer");
+            const progressBar = document.getElementById("ad-progress-bar");
+            let timeLeft = 10;
+
+            timerEl.innerText = timeLeft;
+            progressBar.style.width = "0%";
+
+            playAudioSound('ad_start');
+
+            let elapsed = 0;
+            if (adTimerInterval) clearInterval(adTimerInterval);
+
+            adTimerInterval = setInterval(() => {
+                elapsed += 1;
+                timeLeft = 10 - elapsed;
+                timerEl.innerText = Math.max(0, timeLeft);
+                progressBar.style.width = `${(elapsed / 10) * 100}%`;
+
+                if (elapsed >= 10) {
+                    clearInterval(adTimerInterval);
+                    setTimeout(() => {
+                        modal.classList.add("hidden");
+                        playAudioSound('reward');
+                        if (adCallbackOnSuccess) adCallbackOnSuccess();
+                    }, 500);
+                }
+            }, 1000);
+        }
+
+        // 3-Tier Revive Handlers
+        function handleCharacterDeath() {
+            sessionDeathCount += 1;
+            const reviveModal = document.getElementById("modal-revive");
+            const reviveMsg = document.getElementById("revive-tier-msg");
+
+            if (sessionDeathCount === 1) {
+                reviveMsg.innerText = "1st Death: Watch Video Ad to Revive on spot!";
+                reviveModal.classList.remove("hidden");
+            } else if (sessionDeathCount === 2) {
+                reviveMsg.innerText = "2nd Death: Second chance to watch Video Ad to revive!";
+                reviveModal.classList.remove("hidden");
+            } else if (sessionDeathCount === 3) {
+                reviveMsg.innerText = "3rd Death: Final chance to watch Video Ad to revive!";
+                reviveModal.classList.remove("hidden");
+            } else {
+                // 4th Death: Game Over!
+                reviveModal.classList.add("hidden");
+                triggerGameOverScreen();
+            }
+        }
+
+        function triggerAdRevive() {
+            showRewardedAd(() => {
+                document.getElementById("modal-revive").classList.add("hidden");
+                // Restore HP in game engine
+                if (window.cyberGameEngine && window.cyberGameEngine.revivePlayer) {
+                    window.cyberGameEngine.revivePlayer();
+                }
+            });
+        }
+
+        function cancelReviveExit() {
+            document.getElementById("modal-revive").classList.add("hidden");
+            triggerGameOverScreen();
+        }
+
+        // Game Over & 2X Points Multiplier
+        function triggerGameOverScreen() {
+            const gameOverModal = document.getElementById("modal-gameover");
+            gameOverModal.classList.remove("hidden");
+
+            document.getElementById("final-session-score").innerText = sessionScore;
+            doublePointsClaimed = false;
+
+            const doubleLabel = document.getElementById("label-double-pts");
+            doubleLabel.innerText = `Watch Ad to Double Your Points (Get ${sessionScore * 2} Points)`;
+            document.getElementById("btn-double-points").disabled = false;
+        }
+
+        function triggerAd2XPoints() {
+            if (doublePointsClaimed) return;
+            showRewardedAd(() => {
+                doublePointsClaimed = true;
+                const bonusPoints = sessionScore * 2;
+                state.points += bonusPoints;
+                addHistoryItem("GAME", `2X Points Reward (Ad Watched)`, `+${bonusPoints} Points`);
+                saveState();
+
+                document.getElementById("label-double-pts").innerText = `2X POINTS CLAIMED! (+${bonusPoints} Points)`;
+                document.getElementById("btn-double-points").disabled = true;
+                alert(`Success! Double points credited: +${bonusPoints} Points.`);
+            });
+        }
+
+        function finishGameOverDashboard() {
+            if (!doublePointsClaimed && sessionScore > 0) {
+                state.points += sessionScore;
+                addHistoryItem("GAME", "Game Session Score Credited", `+${sessionScore} Points`);
+                saveState();
+            }
+            document.getElementById("modal-gameover").classList.add("hidden");
+            exit3DGame();
+        }
+
+        /* ==========================================================================
+           6. AUDIO SYNTHESIZER ENGINE (WEB AUDIO API - NO EXTERNAL AUDIO FILES)
+           ========================================================================== */
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playAudioSound(type) {
+            try {
+                initAudio();
+                if (!audioCtx) return;
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                const now = audioCtx.currentTime;
+
+                if (type === 'laser') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(800, now);
+                    osc.frequency.exponentialRampToValueAtTime(100, now + 0.15);
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+                    osc.start(now);
+                    osc.stop(now + 0.15);
+                } else if (type === 'hit') {
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(150, now);
+                    osc.frequency.exponentialRampToValueAtTime(30, now + 0.1);
+                    gain.gain.setValueAtTime(0.4, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+                    osc.start(now);
+                    osc.stop(now + 0.1);
+                } else if (type === 'spin') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(300, now);
+                    osc.frequency.exponentialRampToValueAtTime(600, now + 0.3);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.linearRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                } else if (type === 'reward' || type === 'ad_start') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(440, now);
+                    osc.frequency.setValueAtTime(880, now + 0.1);
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                }
+            } catch (e) {
+                console.warn("Web Audio API not allowed yet", e);
+            }
+        }
+
+        /* ==========================================================================
+           7. 3D THREE.JS GAME ENGINE & PROCEDURAL MESH GENERATION
+           ========================================================================== */
+        class CyberCity3DEngine {
+            constructor() {
+                this.container = document.getElementById("game-container");
+                this.scene = null;
+                this.camera = null;
+                this.renderer = null;
+
+                this.playerMesh = null;
+                this.playerSpeed = 0.15;
+                this.playerHp = 100;
+                this.maxHp = 100;
+
+                this.enemies = [];
+                this.bullets = [];
+                this.vehicles = [];
+
+                this.activeVehicle = null;
+                this.isDriving = false;
+
+                this.keys = {};
+                this.joystickDir = { x: 0, y: 0 };
+                this.cameraRotation = { yaw: 0, pitch: 0 };
+
+                this.animationFrameId = null;
+                this.lastTime = performance.now();
+                this.spawnTimer = 0;
+            }
+
+            init() {
+                this.scene = new THREE.Scene();
+                this.scene.background = new THREE.Color(0x050510);
+                this.scene.fog = new THREE.FogExp2(0x050510, 0.015);
+
+                this.camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+                // Clear previous canvas if any
+                const existingCanvas = this.container.querySelector("canvas");
+                if (existingCanvas) existingCanvas.remove();
+
+                this.container.appendChild(this.renderer.domElement);
+
+                this.setupLighting();
+                this.setupEnvironment();
+                this.setupPlayer();
+                this.setupVehicles();
+
+                this.setupInputHandlers();
+                this.setupTouchHUD();
+
+                window.addEventListener("resize", () => this.onWindowResize());
+            }
+
+            setupLighting() {
+                const ambient = new THREE.AmbientLight(0xffffff, 0.4);
+                this.scene.add(ambient);
+
+                const dirLight = new THREE.DirectionalLight(0x00f0ff, 0.8);
+                dirLight.position.set(50, 80, 50);
+                dirLight.castShadow = true;
+                dirLight.shadow.mapSize.width = 1024;
+                dirLight.shadow.mapSize.height = 1024;
+                this.scene.add(dirLight);
+
+                const pinkLight = new THREE.PointLight(0xff007f, 2, 60);
+                pinkLight.position.set(0, 10, 0);
+                this.scene.add(pinkLight);
+            }
+
+            setupEnvironment() {
+                // City Ground Plane
+                const groundGeo = new THREE.PlaneGeometry(300, 300);
+                const groundMat = new THREE.MeshStandardMaterial({
+                    color: 0x10101a,
+                    roughness: 0.8,
+                    metalness: 0.2
+                });
+                const ground = new THREE.Mesh(groundGeo, groundMat);
+                ground.rotation.x = -Math.PI / 2;
+                ground.receiveShadow = true;
+                this.scene.add(ground);
+
+                // Grid lines / Roads
+                const grid = new THREE.GridHelper(300, 60, 0x00f0ff, 0x222244);
+                grid.position.y = 0.01;
+                this.scene.add(grid);
+
+                // Neon City Buildings
+                for (let i = 0; i < 35; i++) {
+                    const h = 20 + Math.random() * 50;
+                    const w = 10 + Math.random() * 15;
+                    const d = 10 + Math.random() * 15;
+                    const bGeo = new THREE.BoxGeometry(w, h, d);
+
+                    const color = Math.random() > 0.5 ? 0x121225 : 0x0a0a18;
+                    const bMat = new THREE.MeshStandardMaterial({ color, roughness: 0.3 });
+                    const building = new THREE.Mesh(bGeo, bMat);
+
+                    let x = (Math.random() - 0.5) * 260;
+                    let z = (Math.random() - 0.5) * 260;
+                    if (Math.abs(x) < 25 && Math.abs(z) < 25) x += 40;
+
+                    building.position.set(x, h / 2, z);
+                    building.castShadow = true;
+                    building.receiveShadow = true;
+                    this.scene.add(building);
+
+                    // Glowing Neon Strips
+                    const neonGeo = new THREE.BoxGeometry(w + 0.2, 1, d + 0.2);
+                    const neonMat = new THREE.MeshBasicMaterial({
+                        color: Math.random() > 0.5 ? 0x00f0ff : 0xff007f
+                    });
+                    const neon = new THREE.Mesh(neonGeo, neonMat);
+                    neon.position.set(x, h * 0.8, z);
+                    this.scene.add(neon);
+                }
+            }
+
+            // PROCEDURAL 3D PLAYER MESH CREATION
+            setupPlayer() {
+                const isFemale = state.activeHero === 'hero1';
+                this.playerMesh = new THREE.Group();
+
+                if (isFemale) {
+                    // Anime Female Heroine (1.7m slender)
+                    // Head
+                    const headGeo = new THREE.SphereGeometry(0.35, 16, 16);
+                    const skinMat = new THREE.MeshStandardMaterial({ color: 0xffdbac, roughness: 0.5 });
+                    const head = new THREE.Mesh(headGeo, skinMat);
+                    head.position.y = 1.5;
+                    this.playerMesh.add(head);
+
+                    // Glowing Ponytail Hair
+                    const hairGeo = new THREE.CylinderGeometry(0.05, 0.2, 0.8, 8);
+                    const hairMat = new THREE.MeshBasicMaterial({ color: 0xff007f });
+                    const ponytail = new THREE.Mesh(hairGeo, hairMat);
+                    ponytail.position.set(0, 1.6, -0.3);
+                    ponytail.rotation.x = -0.5;
+                    this.playerMesh.add(ponytail);
+
+                    // Torso / Skirt Jacket
+                    const torsoGeo = new THREE.CylinderGeometry(0.25, 0.2, 0.7, 12);
+                    const jacketMat = new THREE.MeshStandardMaterial({ color: 0x1f1f3a, metalness: 0.6 });
+                    const torso = new THREE.Mesh(torsoGeo, jacketMat);
+                    torso.position.y = 0.95;
+                    this.playerMesh.add(torso);
+
+                    // Cyber Skirt
+                    const skirtGeo = new THREE.ConeGeometry(0.4, 0.3, 12);
+                    const skirtMat = new THREE.MeshBasicMaterial({ color: 0xff007f });
+                    const skirt = new THREE.Mesh(skirtGeo, skirtMat);
+                    skirt.position.y = 0.65;
+                    this.playerMesh.add(skirt);
+
+                    // Legs
+                    const legGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.6, 8);
+                    const legMat = new THREE.MeshStandardMaterial({ color: 0x00f0ff });
+                    const leftLeg = new THREE.Mesh(legGeo, legMat);
+                    leftLeg.position.set(-0.15, 0.3, 0);
+                    const rightLeg = new THREE.Mesh(legGeo, legMat);
+                    rightLeg.position.set(0.15, 0.3, 0);
+                    this.playerMesh.add(leftLeg, rightLeg);
+
+                } else {
+                    // Male Cyber Mercenary (Broad shoulders, tactical chest armor)
+                    // Head
+                    const headGeo = new THREE.BoxGeometry(0.4, 0.4, 0.4);
+                    const helmMat = new THREE.MeshStandardMaterial({ color: 0x1f1f3a, metalness: 0.8 });
+                    const head = new THREE.Mesh(headGeo, helmMat);
+                    head.position.y = 1.6;
+                    this.playerMesh.add(head);
+
+                    // Blue Neon Visor
+                    const visorGeo = new THREE.BoxGeometry(0.35, 0.1, 0.2);
+                    const visorMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+                    const visor = new THREE.Mesh(visorGeo, visorMat);
+                    visor.position.set(0, 1.65, 0.15);
+                    this.playerMesh.add(visor);
+
+                    // Broad Shoulder Tactical Armor
+                    const torsoGeo = new THREE.BoxGeometry(0.8, 0.8, 0.4);
+                    const armorMat = new THREE.MeshStandardMaterial({ color: 0x101025, metalness: 0.9 });
+                    const torso = new THREE.Mesh(torsoGeo, armorMat);
+                    torso.position.y = 1.0;
+                    this.playerMesh.add(torso);
+
+                    // Blue Lines
+                    const lineGeo = new THREE.BoxGeometry(0.82, 0.08, 0.42);
+                    const lineMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+                    const line = new THREE.Mesh(lineGeo, lineMat);
+                    line.position.y = 1.1;
+                    this.playerMesh.add(line);
+
+                    // Legs
+                    const legGeo = new THREE.BoxGeometry(0.2, 0.6, 0.25);
+                    const legMat = new THREE.MeshStandardMaterial({ color: 0x1a1a2e });
+                    const leftLeg = new THREE.Mesh(legGeo, legMat);
+                    leftLeg.position.set(-0.25, 0.3, 0);
+                    const rightLeg = new THREE.Mesh(legGeo, legMat);
+                    rightLeg.position.set(0.25, 0.3, 0);
+                    this.playerMesh.add(leftLeg, rightLeg);
+                }
+
+                this.playerMesh.position.set(0, 0, 0);
+                this.scene.add(this.playerMesh);
+
+                this.playerHp = isFemale ? 100 : 120;
+                this.maxHp = this.playerHp;
+                this.updateHUDHealth();
+            }
+
+            // PROCEDURAL DRIVABLE SPORTS CARS
+            setupVehicles() {
+                const carPositions = [
+                    { x: 15, z: 15 },
+                    { x: -30, z: 20 },
+                    { x: 40, z: -40 }
+                ];
+
+                carPositions.forEach(pos => {
+                    const carGroup = new THREE.Group();
+
+                    // Car Chassis
+                    const bodyGeo = new THREE.BoxGeometry(2.2, 0.8, 4.2);
+                    const bodyMat = new THREE.MeshStandardMaterial({ color: 0xff007f, metalness: 0.8, roughness: 0.2 });
+                    const body = new THREE.Mesh(bodyGeo, bodyMat);
+                    body.position.y = 0.6;
+                    carGroup.add(body);
+
+                    // Roof / Windshield
+                    const roofGeo = new THREE.BoxGeometry(1.8, 0.6, 2.0);
+                    const roofMat = new THREE.MeshStandardMaterial({ color: 0x00f0ff, metalness: 0.9, roughness: 0.1 });
+                    const roof = new THREE.Mesh(roofGeo, roofMat);
+                    roof.position.set(0, 1.2, -0.2);
+                    carGroup.add(roof);
+
+                    // Wheels
+                    const wheelGeo = new THREE.CylinderGeometry(0.4, 0.4, 0.3, 16);
+                    const wheelMat = new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.5 });
+
+                    const wPositions = [
+                        { x: -1.1, y: 0.4, z: 1.3 },
+                        { x: 1.1, y: 0.4, z: 1.3 },
+                        { x: -1.1, y: 0.4, z: -1.3 },
+                        { x: 1.1, y: 0.4, z: -1.3 }
+                    ];
+
+                    wPositions.forEach(p => {
+                        const wheel = new THREE.Mesh(wheelGeo, wheelMat);
+                        wheel.rotation.z = Math.PI / 2;
+                        wheel.position.set(p.x, p.y, p.z);
+                        carGroup.add(wheel);
+                    });
+
+                    carGroup.position.set(pos.x, 0, pos.z);
+                    this.scene.add(carGroup);
+                    this.vehicles.push(carGroup);
+                });
+            }
+
+            // PROCEDURAL HOSTILE CYBORG ENEMY BOTS
+            spawnEnemy() {
+                if (this.enemies.length >= 8) return;
+
+                const enemyGroup = new THREE.Group();
+
+                // Cyborg Mesh Body
+                const bodyGeo = new THREE.BoxGeometry(0.7, 1.2, 0.4);
+                const bodyMat = new THREE.MeshStandardMaterial({ color: 0x222233, metalness: 0.8 });
+                const body = new THREE.Mesh(bodyGeo, bodyMat);
+                body.position.y = 0.9;
+                enemyGroup.add(body);
+
+                // Red Emissive Glowing Eyes (0xff0000)
+                const eyeGeo = new THREE.BoxGeometry(0.4, 0.1, 0.2);
+                const eyeMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+                const eye = new THREE.Mesh(eyeGeo, eyeMat);
+                eye.position.set(0, 1.35, 0.15);
+                enemyGroup.add(eye);
+
+                // Laser Rifle
+                const rifleGeo = new THREE.BoxGeometry(0.15, 0.15, 0.8);
+                const rifleMat = new THREE.MeshStandardMaterial({ color: 0x111111 });
+                const rifle = new THREE.Mesh(rifleGeo, rifleMat);
+                rifle.position.set(0.35, 0.9, 0.4);
+                enemyGroup.add(rifle);
+
+                // Spawn at distance
+                const angle = Math.random() * Math.PI * 2;
+                const dist = 30 + Math.random() * 30;
+                enemyGroup.position.set(
+                    this.playerMesh.position.x + Math.cos(angle) * dist,
+                    0,
+                    this.playerMesh.position.z + Math.sin(angle) * dist
+                );
+
+                enemyGroup.userData = { hp: 30, shootTimer: 0 };
+                this.scene.add(enemyGroup);
+                this.enemies.push(enemyGroup);
+            }
+
+            setupInputHandlers() {
+                window.addEventListener("keydown", (e) => {
+                    this.keys[e.code] = true;
+                    if (e.code === "Space") this.playerJump();
+                    if (e.code === "KeyF") this.toggleVehicleDrive();
+                });
+                window.addEventListener("keyup", (e) => {
+                    this.keys[e.code] = false;
+                });
+                window.addEventListener("mousedown", (e) => {
+                    if (this.isDriving || e.target.closest("#game-hud")) return;
+                    this.shootLaser();
+                });
+            }
+
+            setupTouchHUD() {
+                const zone = document.getElementById("joystick-zone");
+                const knob = document.getElementById("joystick-knob");
+                if (!zone || !knob) return;
+
+                let touchId = null;
+                const maxRadius = 40;
+
+                const handleTouchStart = (e) => {
+                    for (let i = 0; i < e.changedTouches.length; i++) {
+                        const touch = e.changedTouches[i];
+                        const rect = zone.getBoundingClientRect();
+                        if (touch.clientX >= rect.left && touch.clientX <= rect.right &&
+                            touch.clientY >= rect.top && touch.clientY <= rect.bottom) {
+                            touchId = touch.identifier;
+                            updateJoystick(touch, rect);
+                        }
+                    }
+                };
+
+                const handleTouchMove = (e) => {
+                    if (touchId === null) return;
+                    for (let i = 0; i < e.touches.length; i++) {
+                        if (e.touches[i].identifier === touchId) {
+                            const rect = zone.getBoundingClientRect();
+                            updateJoystick(e.touches[i], rect);
+                        }
+                    }
+                };
+
+                const handleTouchEnd = (e) => {
+                    for (let i = 0; i < e.changedTouches.length; i++) {
+                        if (e.changedTouches[i].identifier === touchId) {
+                            touchId = null;
+                            knob.style.transform = `translate(0px, 0px)`;
+                            this.joystickDir = { x: 0, y: 0 };
+                        }
+                    }
+                };
+
+                const updateJoystick = (touch, rect) => {
+                    const cx = rect.left + rect.width / 2;
+                    const cy = rect.top + rect.height / 2;
+                    let dx = touch.clientX - cx;
+                    let dy = touch.clientY - cy;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist > maxRadius) {
+                        dx = (dx / dist) * maxRadius;
+                        dy = (dy / dist) * maxRadius;
+                    }
+
+                    knob.style.transform = `translate(${dx}px, ${dy}px)`;
+                    this.joystickDir = { x: dx / maxRadius, y: dy / maxRadius };
+                };
+
+                zone.addEventListener("touchstart", handleTouchStart, { passive: true });
+                window.addEventListener("touchmove", handleTouchMove, { passive: true });
+                window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+                // Right touch swipe for camera angle
+                let cameraTouchId = null;
+                let lastTouchX = 0;
+
+                window.addEventListener("touchstart", (e) => {
+                    for (let i = 0; i < e.changedTouches.length; i++) {
+                        const t = e.changedTouches[i];
+                        if (t.clientX > window.innerWidth / 2 && !e.target.closest(".hud-btn")) {
+                            cameraTouchId = t.identifier;
+                            lastTouchX = t.clientX;
+                        }
+                    }
+                }, { passive: true });
+
+                window.addEventListener("touchmove", (e) => {
+                    if (cameraTouchId === null) return;
+                    for (let i = 0; i < e.touches.length; i++) {
+                        const t = e.touches[i];
+                        if (t.identifier === cameraTouchId) {
+                            const deltaX = t.clientX - lastTouchX;
+                            this.cameraRotation.yaw -= deltaX * 0.005;
+                            lastTouchX = t.clientX;
+                        }
+                    }
+                }, { passive: true });
+
+                window.addEventListener("touchend", (e) => {
+                    for (let i = 0; i < e.changedTouches.length; i++) {
+                        if (e.changedTouches[i].identifier === cameraTouchId) {
+                            cameraTouchId = null;
+                        }
+                    }
+                }, { passive: true });
+            }
+
+            shootLaser() {
+                playAudioSound('laser');
+
+                // Laser Particle Projectile
+                const pGeo = new THREE.SphereGeometry(0.15, 8, 8);
+                const pMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+                const projectile = new THREE.Mesh(pGeo, pMat);
+
+                const origin = this.playerMesh.position.clone().add(new THREE.Vector3(0, 1.2, 0));
+                projectile.position.copy(origin);
+
+                const dir = new THREE.Vector3(0, 0, -1).applyAxisAngle(new THREE.Vector3(0, 1, 0), this.cameraRotation.yaw);
+                projectile.userData = { dir, speed: 1.2, lifetime: 60, isPlayer: true };
+
+                this.scene.add(projectile);
+                this.bullets.push(projectile);
+            }
+
+            playerJump() {
+                if (this.playerMesh.position.y <= 0.05 && !this.isDriving) {
+                    this.playerMesh.userData.velocityY = 0.25;
+                }
+            }
+
+            toggleVehicleDrive() {
+                if (this.isDriving) {
+                    // Exit Vehicle
+                    this.isDriving = false;
+                    this.playerMesh.visible = true;
+                    this.playerMesh.position.copy(this.activeVehicle.position).add(new THREE.Vector3(2, 0, 0));
+                    this.activeVehicle = null;
+                    document.getElementById("vehicle-hud-badge").classList.add("hidden");
+                } else {
+                    // Find Nearest Vehicle
+                    this.vehicles.forEach(v => {
+                        const dist = this.playerMesh.position.distanceTo(v.position);
+                        if (dist < 4) {
+                            this.isDriving = true;
+                            this.activeVehicle = v;
+                            this.playerMesh.visible = false;
+                            document.getElementById("vehicle-hud-badge").classList.remove("hidden");
+                        }
+                    });
+                }
+            }
+
+            updateHUDHealth() {
+                const hpBar = document.getElementById("hud-hp-bar");
+                const hpVal = document.getElementById("hud-hp-val");
+                if (hpBar && hpVal) {
+                    const pct = Math.max(0, (this.playerHp / this.maxHp) * 100);
+                    hpBar.style.width = `${pct}%`;
+                    hpVal.innerText = `${Math.max(0, Math.floor(this.playerHp))} / ${this.maxHp}`;
+                }
+            }
+
+            revivePlayer() {
+                this.playerHp = this.maxHp;
+                this.updateHUDHealth();
+            }
+
+            onWindowResize() {
+                if (!this.camera || !this.renderer) return;
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+
+            start() {
+                this.init();
+                this.lastTime = performance.now();
+                const loop = (now) => {
+                    this.update(now);
+                    this.render();
+                    this.animationFrameId = requestAnimationFrame(loop);
+                };
+                this.animationFrameId = requestAnimationFrame(loop);
+            }
+
+            stop() {
+                if (this.animationFrameId) {
+                    cancelAnimationFrame(this.animationFrameId);
+                }
+            }
+
+            update(now) {
+                const delta = (now - this.lastTime) / 1000;
+                this.lastTime = now;
+
+                // Spawn Enemies
+                this.spawnTimer += delta;
+                if (this.spawnTimer > 3) {
+                    this.spawnEnemy();
+                    this.spawnTimer = 0;
+                }
+
+                // Player Movement / Driving
+                let moveX = this.joystickDir.x;
+                let moveZ = this.joystickDir.y;
+
+                if (this.keys["KeyW"] || this.keys["ArrowUp"]) moveZ = -1;
+                if (this.keys["KeyS"] || this.keys["ArrowDown"]) moveZ = 1;
+                if (this.keys["KeyA"] || this.keys["ArrowLeft"]) moveX = -1;
+                if (this.keys["KeyD"] || this.keys["ArrowRight"]) moveX = 1;
+
+                if (this.isDriving && this.activeVehicle) {
+                    // Vehicle Driving Physics
+                    const speed = 0.4;
+                    const dir = new THREE.Vector3(moveX, 0, moveZ).normalize();
+                    dir.applyAxisAngle(new THREE.Vector3(0, 1, 0), this.cameraRotation.yaw);
+
+                    this.activeVehicle.position.addScaledVector(dir, speed);
+                    if (dir.length() > 0.1) {
+                        this.activeVehicle.rotation.y = Math.atan2(dir.x, dir.z) + Math.PI;
+                    }
+                    this.playerMesh.position.copy(this.activeVehicle.position);
+                } else {
+                    // On Foot Movement
+                    const speed = this.playerSpeed;
+                    const dir = new THREE.Vector3(moveX, 0, moveZ).normalize();
+                    dir.applyAxisAngle(new THREE.Vector3(0, 1, 0), this.cameraRotation.yaw);
+
+                    this.playerMesh.position.addScaledVector(dir, speed);
+                    if (dir.length() > 0.1) {
+                        this.playerMesh.rotation.y = Math.atan2(dir.x, dir.z) + Math.PI;
+                    }
+
+                    // Jump Physics
+                    if (this.playerMesh.userData.velocityY) {
+                        this.playerMesh.position.y += this.playerMesh.userData.velocityY;
+                        this.playerMesh.userData.velocityY -= 0.015;
+                        if (this.playerMesh.position.y <= 0) {
+                            this.playerMesh.position.y = 0;
+                            this.playerMesh.userData.velocityY = 0;
+                        }
+                    }
+                }
+
+                // Camera Follow
+                const camOffset = this.isDriving ? new THREE.Vector3(0, 6, 12) : new THREE.Vector3(0, 3, 6);
+                camOffset.applyAxisAngle(new THREE.Vector3(0, 1, 0), this.cameraRotation.yaw);
+                this.camera.position.copy(this.playerMesh.position).add(camOffset);
+                this.camera.lookAt(this.playerMesh.position.clone().add(new THREE.Vector3(0, 1, 0)));
+
+                // Update Bullets
+                for (let i = this.bullets.length - 1; i >= 0; i--) {
+                    const b = this.bullets[i];
+                    b.position.addScaledVector(b.userData.dir, b.userData.speed);
+                    b.userData.lifetime -= 1;
+
+                    // Bullet Collision with Enemies
+                    if (b.userData.isPlayer) {
+                        this.enemies.forEach(e => {
+                            if (b.position.distanceTo(e.position) < 1.2) {
+                                e.userData.hp -= 15;
+                                b.userData.lifetime = 0;
+                                playAudioSound('hit');
+                                if (e.userData.hp <= 0) {
+                                    sessionScore += 20;
+                                    document.getElementById("game-score").innerText = sessionScore;
+                                }
+                            }
+                        });
+                    } else {
+                        // Enemy Bullet Collision with Player
+                        if (b.position.distanceTo(this.playerMesh.position) < 1.0) {
+                            this.playerHp -= 10;
+                            b.userData.lifetime = 0;
+                            playAudioSound('hit');
+                            this.updateHUDHealth();
+
+                            if (this.playerHp <= 0) {
+                                handleCharacterDeath();
+                            }
+                        }
+                    }
+
+                    if (b.userData.lifetime <= 0) {
+                        this.scene.remove(b);
+                        this.bullets.splice(i, 1);
+                    }
+                }
+
+                // Update Enemies AI
+                for (let i = this.enemies.length - 1; i >= 0; i--) {
+                    const e = this.enemies[i];
+                    if (e.userData.hp <= 0) {
+                        this.scene.remove(e);
+                        this.enemies.splice(i, 1);
+                        continue;
+                    }
+
+                    // Pathing towards player
+                    const toPlayer = this.playerMesh.position.clone().sub(e.position).setY(0);
+                    const dist = toPlayer.length();
+                    toPlayer.normalize();
+
+                    if (dist > 4) {
+                        e.position.addScaledVector(toPlayer, 0.05);
+                        e.rotation.y = Math.atan2(toPlayer.x, toPlayer.z);
+                    }
+
+                    // Shoot at player
+                    e.userData.shootTimer += delta;
+                    if (e.userData.shootTimer > 2.0 && dist < 20) {
+                        e.userData.shootTimer = 0;
+                        const enemyBulletGeo = new THREE.SphereGeometry(0.12, 8, 8);
+                        const enemyBulletMat = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+                        const eb = new THREE.Mesh(enemyBulletGeo, enemyBulletMat);
+                        eb.position.copy(e.position).add(new THREE.Vector3(0, 1, 0));
+                        eb.userData = { dir: toPlayer, speed: 0.6, lifetime: 80, isPlayer: false };
+                        this.scene.add(eb);
+                        this.bullets.push(eb);
+                    }
+                }
+            }
+
+            render() {
+                if (this.renderer && this.scene && this.camera) {
+                    this.renderer.render(this.scene, this.camera);
+                }
+            }
+        }
+
+        window.cyberGameEngine = null;
+
+        function launch3DGame() {
+            sessionScore = 0;
+            sessionDeathCount = 0;
+            document.getElementById("game-score").innerText = "0";
+
+            const gameContainer = document.getElementById("game-container");
+            gameContainer.classList.remove("hidden");
+
+            if (!window.cyberGameEngine) {
+                window.cyberGameEngine = new CyberCity3DEngine();
+            }
+            window.cyberGameEngine.start();
+        }
+
+        function exit3DGame() {
+            if (window.cyberGameEngine) {
+                window.cyberGameEngine.stop();
+            }
+            document.getElementById("game-container").classList.add("hidden");
+            switchTab('dashboard');
+        }
+
+        function triggerPlayerShoot() {
+            if (window.cyberGameEngine) {
+                window.cyberGameEngine.shootLaser();
+            }
+        }
+
+        function triggerPlayerJump() {
+            if (window.cyberGameEngine) {
+                window.cyberGameEngine.playerJump();
+            }
+        }
+
+        function toggleVehicleDrive() {
+            if (window.cyberGameEngine) {
+                window.cyberGameEngine.toggleVehicleDrive();
+            }
+        }
+
+        /* ==========================================================================
+           8. INITIALIZATION ON DOM READY
+           ========================================================================== */
+        window.addEventListener("DOMContentLoaded", () => {
+            // Lucide icons init
+            lucide.createIcons();
+
+            // Init state & language
+            saveState();
+            changeLanguage(currentLang);
+            initSpinWheels();
+
+            // Check guest login prompt
+            if (!localStorage.getItem("CYBERCITY_3D_STATE")) {
+                document.getElementById("modal-auth").classList.remove("hidden");
+            }
+        });
+    </script>
+</body>
+</html>
