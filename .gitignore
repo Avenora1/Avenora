@@ -1,0 +1,7 @@
+.dart_tool/
+.packages
+.pub/
+build/
+android/local.properties
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+*.log
